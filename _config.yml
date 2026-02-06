@@ -18,7 +18,7 @@ description: >- # dont remove this line. this will ignore all new lines until th
   I lead teams that build robots that move dirt, close control loops, and pass real tests.
   Mechanical engineer focused on robotics, autonomy, and systems-level design.
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
-profile_image: ./assets/images/profile-image/Headshot.JPG
+profile_image: ./assets/images/profile-image/headshot.jpg
 
 
 # Link your resume
