@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CMU NASA Lunabotics — “Moon Miners” Rover (2026)
-description: Building a competition rover to autonomously excavate and shape lunar regolith. I’m leading a first-year team from zero → test-ready hardware: mechanism design, integration, manufacturing planning, and getting the full system to behave in the real world (not just in CAD).
+title: "CMU NASA Lunabotics — \"Moon Miners\" Rover (2026)"
+description: "Building a competition rover to autonomously excavate and shape lunar regolith. I’m leading a first-year team from zero -> test-ready hardware: mechanism design, integration, manufacturing planning, and getting the full system to behave in the real world (not just in CAD)."
 skills:
   - Systems integration
   - Mechanism design (linkages, excavation, structures)
@@ -10,7 +10,7 @@ skills:
   - Design reviews (SRR/PDR/CDR style)
   - Prototyping & manufacturing planning
   - Test planning + instrumentation
-main-image: /images/lunabotics-hero.png
+main-image: "/images/lunabotics-hero.png"
 ---
 
 ## The mission
