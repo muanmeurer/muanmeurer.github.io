@@ -5,17 +5,20 @@ description: "Building a competition rover to autonomously excavate and shape lu
 skills:
   - Systems integration
   - Mechanism design (linkages, excavation, structures)
-  - CAD (SolidWorks / Onshape)
-  - FEA + structural sizing
-  - Design reviews (SRR/PDR/CDR style)
-  - Prototyping & manufacturing planning
-  - Test planning + instrumentation
+  - CAD (SolidWorks/Onshape) + FEA
+  - Design reviews (SRR/PDR/CDR)
+  - Prototyping & Manufacturing Planning
+  - Test planning + Instrumentation
 main-image: "/images/lunabotics-hero.png"
 ---
 
-## The mission
-{% include image-gallery.html images="images/group.jpg" height="420" %}
-<span style="font-size: 10px">Moon Miners Team — CMU Lunabotics.</span>
+## The Mission
+<div style="text-align: center;">
+  {% include image-gallery.html images="images/group.jpg" height="420" %}
+  <div style="font-size: 10px;">
+    Moon Miners Team — CMU Lunabotics.
+  </div>
+</div>
 
 We’re building a rover for NASA’s Lunabotics competition — the goal isn’t a flashy demo. It’s a machine that can **move regolith, on purpose, repeatedly**, and do it with the kind of reliability you’d trust in a harsh environment.
 
