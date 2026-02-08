@@ -51,7 +51,7 @@ At a high level, the rover is built around three realities:
 - **Sensor mast / perception mounting:** field-of-view needs vs structural constraints vs vibration
 - **Powertrain / mobility interfaces:** packaging, alignment, and mechanical-electrical handoffs
 
-{% include image-gallery.html images="images/lunabotics-subsystems-1.jpg, images/lunabotics-subsystems-2.jpg" height="320" %}
+{% include image-gallery.html images="images/mech-architecture.png" height="320" %}
 <span style="font-size: 10px">Add: one clean CAD render + one “real build” photo. That combo sells credibility fast.</span>
 
 ---
