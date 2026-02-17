@@ -14,7 +14,7 @@ main-image: "/images/lunabotics-hero.png"
 
 ## The Mission
 <div style="text-align: center;">
-  {% include image-gallery.html images="images/group.jpg" height="420" %}
+  {% include image-gallery.html images="images/group.jpg" height="750" %}
   <div style="font-size: 10px;">
     Moon Miners Team — CMU Lunabotics.
   </div>
