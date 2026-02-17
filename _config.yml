@@ -7,7 +7,7 @@
 
 # Main Page Setup
 
-title: Muan Meurer's Engineering Portfolio # This is what shows up in the tab of the browser
+title: Muan Meurer - Portfolio # This is what shows up in the tab of the browser
 
 # Hero Section
 name: Muan Meurer
@@ -46,10 +46,7 @@ skills:
     - SolidWorks (assemblies, drawings)
     - Fusion 360 (Autodesk)
     - Onshape
-    - Creo
-    - Siemens NX
-    - CATIA (Dassault Systèmes)
-    - Inventor (Autodesk)
+    - Crei
 
   - category: Structural, Thermal & System Analysis
     tools:
@@ -61,21 +58,18 @@ skills:
 
   - category: Prototyping & Fabrication
     tools:
-    - FDM / SLA / SLS 3D printing
-    - CNC machining (basic operation & design-for-machining)
+    - 3D printing/Rapid Prototyping
+    - CNC, Mill, Lathe (basic operation & design-for-machining)
     - Laser cutting
     - Waterjet cutting
-    - Rapid prototyping & fit-check builds
-    - Arduino / microcontroller integration
-    - Breadboarding & hardware debugging
+    - Arduino/microcontroller integration
 
   - category: Design Standards & Engineering Practice
     tools:
-    - GD&T (ASME Y14.5)
+    - GD&T 
     - Fits & tolerances
     - Design for manufacturability (DFM)
     - Interface definition & documentation
-    - Requirements-driven design
 
   - category: Programming & Technical Computing
     tools:
