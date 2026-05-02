@@ -1,8 +1,8 @@
 ---
 layout: post
 order: 2
-title: "Coil Winder: Automated Inductance Sensor Fabrication"
-description: "Designed and built an automated variable-geometry coil winder to improve repeatability and reduce manual fabrication time for inductance sensor prototyping."
+title: "Coil Winder: Automated Sensor-Coil Fabrication"
+description: "I helped design and build Coil Boy, a semi-automated coil winder that produced repeatable custom coils across a 6–75 mm diameter range and helped replace slow manual winding for Westinghouse eVinci sensor prototyping."
 skills:
   - Mechatronics
   - Arduino control
@@ -13,23 +13,29 @@ skills:
 main-image: "/cover.jpg"
 ---
 
+
 ## Introduction
 
-Inductance sensor development depends on coils that can be fabricated repeatably. Hand-winding made it difficult to control turns, pitch, diameter, wire tension, and layer alignment, which slowed testing and made sensor comparisons less reliable. The objective was to build a compact automated coil winder that could produce variable-geometry coils for Westinghouse eVinci microreactor sensor prototyping with better repeatability than manual winding.
+Westinghouse’s eVinci microreactor research team needed custom coils for Linear Variable Differential Transformer sensor testing. Manual winding made prototyping slow and inconsistent because coil diameter, pitch, wire tension, and turn count all affected inductance. The objective was to build a semi-automated winder that could produce accurate, repeatable coils from 6 mm to 75 mm inner diameter so the team could test more sensor configurations in-house.
 
 ## Methods
 
-I designed the machine around a lathe-style architecture: a rotating spindle drives the mandrel while a synchronized linear rail moves the wire guide. The prototype used stepper-driven motion, Arduino-based control, homing logic, user prompts for coil geometry, winding-speed scaling, and multi-layer winding behavior. Mechanical work focused on wire placement, lead security, passive tensioning, and interchangeable mandrels so the machine could support different coil diameters and wire gauges.
+Our design used a lathe-style architecture. A NEMA 23 motor rotated an interchangeable mandrel in a lathe chuck, while a NEMA 17 motor drove a ball-screw carriage that moved the wire guide along the coil axis. I contributed to the mechanical architecture, winding workflow, and integration decisions around lead clamping, passive tensioning, mandrel swapping, coil removal, and synchronized spindle-to-rail motion. The design also included a spring-loaded arm and pulley tensioner so the system could maintain more consistent laydown across 18–32 AWG wire.
 
-![Automated coil winder prototype](/assets/images/portfolio/coil-winder.jpg)
-<p class="caption">Prototype coil winder with spindle, linear rail, wire guide, controls, and interchangeable winding hardware.</p>
+<div class="figure-grid three">
+  <img src="/assets/images/portfolio/coil-winder-prototype2.png" alt="Coil Boy prototype with labeled subsystems">
+  <img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter ranges">
+  <img src="/assets/images/portfolio/coil-induction-precision-data.png" alt="Coil winder precision data">
+</div>
+<p class="caption">The prototype combined spindle rotation, axial wire traversal, passive tensioning, and removable winding stock into one testable mechatronic system.</p>
 
 ## Results
 
-The prototype produced a functional mechatronic platform for automated winding and clarified the main design risks: tension variation, layer-to-layer alignment, spindle-to-rail synchronization, and reliable start/end behavior. The system demonstrated the core winding workflow and supported iteration toward coils with less than 3% inductance variability. The build also created a practical testbed for comparing mandrel geometry, wire tension, and winding settings.
+Coil Boy demonstrated semi-automated winding across the geometry range required by the sponsor. Testing compared coils made with 18, 24, and 32 AWG wire at minimum contact pitch and at a uniform 2 mm pitch. The 2 mm pitch configurations met the sponsor’s less-than-3% inductance-deviation target across all gauges, while minimum-pitch cases struggled for 24 and 32 AWG. The final prototype supported 1–600 turns, 1–6 cm coil lengths, 0–2 mm pitch, and 6–75 mm coil diameters.
 
-![Coil winder test result placeholder](/assets/images/portfolio/coil-results-placeholder.svg)
+![Induction ratio data for Coil Boy](/assets/images/portfolio/coil-induction-ratio-data.png)
+<p class="caption">Test data showed that wider pitch and finer-gauge configurations were more repeatable, while minimum-pitch winding remained the main area for refinement.</p>
 
 ## Discussion
 
-The project showed that repeatable fabrication is a systems problem, not just a motor-control problem. A coil that looks simple depends on synchronized motion, consistent wire tension, clean fixturing, usable controls, and reliable homing. This project demonstrates mechatronics, mechanism design, controls, prototyping, debugging, and the ability to translate a research fabrication need into a physical engineering tool.
+This project showed that repeatable fabrication is a full mechatronics problem, not just a motor-control problem. The coil quality depended on synchronized motion, tension stability, fixturing, lead security, and a workflow that a user could actually run. The outcome was a functional prototype that supported Westinghouse’s in-house R&D workflow and gave the team a clear path for improving minimum-pitch performance. This project demonstrates mechanism design, controls, prototyping, test planning, and design iteration around a real sponsor need.

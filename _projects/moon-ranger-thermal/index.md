@@ -1,8 +1,8 @@
 ---
 layout: post
 order: 4
-title: "Moon Ranger Thermal Analysis"
-description: "Built thermal models and simulations to evaluate lunar rover survivability, component temperatures, and power-system viability under extreme lunar operating conditions."
+title: "MoonRanger Thermal Analysis"
+description: "I modeled MoonRanger thermal and power behavior to evaluate whether sensitive components could survive lunar transit, landing, surface operations, shadowed regions, and charging constraints."
 skills:
   - Thermal analysis
   - Space systems
@@ -10,23 +10,32 @@ skills:
   - Python simulation
   - Design documentation
   - Margin assessment
-main-image: "/cover.svg"
+main-image: "/cover.png"
 ---
+
 
 ## Introduction
 
-Lunar rover hardware must survive extreme hot and cold cases with limited power, limited mass, and almost no convective cooling. Moon Ranger required thermal reasoning that connected environmental conditions, electronics reliability, battery performance, and mechanical design constraints. The objective was to evaluate whether the rover could maintain acceptable component temperatures and power-system margins during lunar operation.
+Small lunar rovers face extreme thermal conditions: direct solar heating, deep-space radiation, cold regolith, long shadow periods, and limited heater power. MoonRanger needed to keep avionics, batteries, motors, sensors, and other temperature-sensitive components inside required storage and operating limits through transit and surface operations. The objective was to use thermal and power simulations to identify whether the rover could survive expected mission cases and where design or operational limits were needed.
 
 ## Methods
 
-I worked on mechanical, thermal, and battery simulation tasks for the rover. The analysis used large Thermal Desktop models with more than 1,500 nodes to evaluate conduction, radiation, and internal heat dissipation across relevant operating cases. I also developed Python simulations to estimate terrain-driven power losses and connect thermal behavior to battery and mission-level energy constraints. The work required documenting assumptions, boundary conditions, and the design implications of the results.
+I worked on mechanical, thermal, and battery simulation tasks for the rover. The analysis used finite-difference Thermal Desktop models with more than 1,500 nodes to evaluate conduction, radiation, optical properties, internal heat dissipation, and surface interactions. Transit and surface-operation cases used different model configurations because the rover sees different heat sources before and after deployment. I also used Python simulations to estimate terrain-driven power losses and connect those losses to battery and mission-level energy margins.
 
-![Moon Ranger thermal placeholder](/assets/images/portfolio/moon-ranger-placeholder.svg)
+<div class="figure-grid three">
+  <img src="/assets/images/portfolio/moonranger-thermal_geometry.png" alt="MoonRanger thermal geometry model">
+  <img src="/assets/images/portfolio/moonranger-cross_section.png" alt="MoonRanger thermal cross-section">
+  <img src="/assets/images/portfolio/moonranger-heatloads.png" alt="MoonRanger thermal heat load diagram">
+</div>
+<p class="caption">The thermal model connected rover geometry, heat paths, external radiation, internal dissipation, and battery limits.</p>
 
 ## Results
 
-The models helped identify how component temperatures and energy margins changed across operating conditions. Terrain-driven power losses were estimated at roughly 20%, which made battery budgeting and thermal load assumptions more important to the system design. The thermal work also supported design trades involving layout, surface properties, insulation, heat paths, and operational limits.
+The simulations showed which mission phases were thermally safe and which required operational constraints. Nominal operation kept most internal components near 25°C, with the central computer and IR projector closer to 35°C. Permanently shadowed and solar-occlusion cases were driven by battery state of charge and heater allocation rather than simple steady-state temperature alone. Terrain-driven losses of roughly 20% also affected the energy budget, making thermal assumptions and battery margins part of the same design problem.
+
+![MoonRanger avionics heat graph](/assets/images/portfolio/moonranger-avionics-heatgraph.png)
+<p class="caption">Thermal results were used to understand avionics temperature limits, heater behavior, battery constraints, and safe operating windows.</p>
 
 ## Discussion
 
-The project showed that thermal analysis is only useful when it can influence design decisions. A model has to be clear enough for teammates to understand the assumptions, trust the margins, and act on the results. This project demonstrates heat-transfer analysis, space-systems thinking, simulation, documentation, and the ability to translate analytical results into mechanical and operational constraints.
+The main lesson was that thermal analysis is only useful if it changes design behavior. The model had to be clear enough for teammates to understand what assumptions were driving the result, which components had margin, and which operating cases needed limits. This project demonstrates space-systems thinking, heat-transfer analysis, simulation, Python modeling, documentation, and the ability to translate model outputs into mechanical, electrical, and operational constraints.
