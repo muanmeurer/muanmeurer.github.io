@@ -1,20 +1,10 @@
-<!-- SECTION 4: Contact-->
-<section id="contact" class= "contact-section">
-    <h2>Contact</h2>
-
-    <div class="group">
-      
-        <form action="https://formspree.io/f/{{site.formspree-key}}" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-
-            <label for="message">Message</label>
-            <textarea id="message" cols = "30" rows="10" name="message"></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-  </section>
+<section id="contact" class="contact-section">
+  <p class="section-kicker">CONTACT</p>
+  <h2>Let’s build something useful.</h2>
+  <p class="contact-intro">I’m interested in robotics, mechanical design, autonomy, thermal analysis, and systems-focused engineering work.</p>
+  <div class="contact-links">
+    <a href="mailto:{{ site.email | default: 'muanmeurer@gmail.com' }}"><i class="fa-regular fa-envelope"></i> Email Me</a>
+    {% if site.external-links.linkedin %}<a href="https://www.linkedin.com/in/{{ site.external-links.linkedin }}/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>{% endif %}
+    {% if site.external-links.github %}<a href="https://github.com/{{ site.external-links.github }}/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>{% endif %}
+  </div>
+</section>

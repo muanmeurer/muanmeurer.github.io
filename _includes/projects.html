@@ -1,25 +1,27 @@
-<!-- SECTION 3: project -->
 <section id="projects" class="project-grid-section">
-    <h2>Projects</h2>
+  <p class="section-kicker">FEATURED WORK</p>
+  <h2>Selected Projects</h2>
 
-    <div class="grid-container">
-        {% assign sorted_projects = site.projects | sort: "order" %}
-        {% for item in sorted_projects %}
-    <a href="{{ item.url | relative_url }}" class="project-link">
-        <div class="project-card">
-            {% assign folder_path = item.path | split: "/" | slice: 0, 2 | join: "/" %}
-            {% assign image_path = "/" | append: folder_path | append: item['main-image'] %}
-            <img src="{{ image_path | relative_url }}" alt="{{ item.title }} image">
+  <div class="grid-container">
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for item in sorted_projects %}
+      <a href="{{ item.url | relative_url }}" class="project-link">
+        <article class="project-card">
+          {% assign folder_path = item.path | split: "/" | slice: 0, 2 | join: "/" %}
+          {% assign image_path = "/" | append: folder_path | append: item['main-image'] %}
+          <img src="{{ image_path | relative_url }}" alt="{{ item.title }} image">
+          <div class="project-card-body">
             <h3 class="project-title">{{ item.title }}</h3>
-            <div class="project-skills">
-                {% for skill in item.skills %}
-                    <span class="skill">{{ skill }}</span>
-                {% endfor %}
-            </div>
             <p class="project-description">{{ item.description }}</p>
-            <button class="read-more">Read more →</button>
-        </div>
-    </a>
-{% endfor %}
-    </div>
+            <div class="project-skills">
+              {% for skill in item.skills limit:3 %}
+                <span class="skill">{{ skill }}</span>
+              {% endfor %}
+            </div>
+            <span class="read-more">View Project <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </article>
+      </a>
+    {% endfor %}
+  </div>
 </section>
