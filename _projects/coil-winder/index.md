@@ -2,7 +2,7 @@
 layout: post
 order: 2
 title: "Coil Winder: Automated Inductance Sensor Fabrication"
-description: "Designed and prototyped an automated coil-winding machine to improve repeatability and reduce manual fabrication time for inductance sensor research."
+description: "Designed and built an automated variable-geometry coil winder to improve repeatability and reduce manual fabrication time for inductance sensor prototyping."
 skills:
   - Mechatronics
   - Arduino control
@@ -10,33 +10,26 @@ skills:
   - Stepper motors
   - Prototyping
   - Design iteration
-main-image: "/cover.svg"
+main-image: "/cover.jpg"
 ---
 
-## Objective
+## Introduction
 
-The coil winder was developed to remove a manual bottleneck in inductance sensor prototyping. Hand-winding coils made it difficult to control turns, pitch, diameter, and repeatability, which slowed down testing and made it harder to compare sensor configurations. The goal was to build a compact machine that could wind coils with adjustable geometry and provide more consistent test articles for engineering development.
+Inductance sensor development depends on coils that can be fabricated repeatably. Hand-winding made it difficult to control turns, pitch, diameter, wire tension, and layer alignment, which slowed testing and made sensor comparisons less reliable. The objective was to build a compact automated coil winder that could produce variable-geometry coils for Westinghouse eVinci microreactor sensor prototyping with better repeatability than manual winding.
 
-## My Role
+## Methods
 
-I worked on the mechanical layout, motion concept, control logic, and prototype integration. The design used a lathe-style architecture: a rotating spindle drove the mandrel while a traversing nozzle positioned the wire along the coil length. I also worked through practical implementation issues such as homing, start position offsets, acceleration behavior, multi-layer winding, wire tension, and synchronization between spindle rotation and X-axis travel.
+I designed the machine around a lathe-style architecture: a rotating spindle drives the mandrel while a synchronized linear rail moves the wire guide. The prototype used stepper-driven motion, Arduino-based control, homing logic, user prompts for coil geometry, winding-speed scaling, and multi-layer winding behavior. Mechanical work focused on wire placement, lead security, passive tensioning, and interchangeable mandrels so the machine could support different coil diameters and wire gauges.
 
-## Design and Process
+![Automated coil winder prototype](/assets/images/portfolio/coil-winder.jpg)
+<p class="caption">Prototype coil winder with spindle, linear rail, wire guide, controls, and interchangeable winding hardware.</p>
 
-The system was organized around four core functions: wire placement, lead security, tensioning, and quick-swap mandrels. A stepper-driven spindle controlled coil rotation while a linear rail moved the wire guide. A passive tensioning system helped maintain wire consistency across different wire gauges, and a chuck-style mandrel interface allowed faster changes between coil diameters. As the prototype matured, the control code was updated to support homing, automatic travel to the start of the spindle, user prompts for coil geometry, and multi-layer winding where the X-axis reverses direction while maintaining spindle motion.
+## Results
 
-## Outcome and Evaluation
+The prototype produced a functional mechatronic platform for automated winding and clarified the main design risks: tension variation, layer-to-layer alignment, spindle-to-rail synchronization, and reliable start/end behavior. The system demonstrated the core winding workflow and supported iteration toward coils with less than 3% inductance variability. The build also created a practical testbed for comparing mandrel geometry, wire tension, and winding settings.
 
-The project produced a working prototype direction for automated coil fabrication and clarified the main design risks: wire tension, layer-to-layer alignment, synchronization, and reliable start/end behavior. Even when the machine exposed problems, those failures were useful because they showed exactly where manual assumptions broke down. The project demonstrates hands-on mechatronics work: combining mechanical design, electronics, controls, and user-facing software into a physical tool that has to behave repeatably.
+![Coil winder test result placeholder](/assets/images/portfolio/coil-results-placeholder.svg)
 
-## Skills Demonstrated
+## Discussion
 
-- Designed a lathe-style winding architecture for variable coil geometries
-- Integrated stepper motors, limit switches, and Arduino-based motion control
-- Added homing, start-position logic, winding-speed scaling, and multi-layer behavior
-- Iterated around real build issues including wire snagging, tension variation, and X-axis alignment
-- Translated a research fabrication need into a practical machine concept
-
-## Suggested Images to Add
-
-Useful images would include the full prototype, spindle/mandrel close-up, X-axis rail/nozzle, wiring/control setup, and one finished coil.
+The project showed that repeatable fabrication is a systems problem, not just a motor-control problem. A coil that looks simple depends on synchronized motion, consistent wire tension, clean fixturing, usable controls, and reliable homing. This project demonstrates mechatronics, mechanism design, controls, prototyping, debugging, and the ability to translate a research fabrication need into a physical engineering tool.

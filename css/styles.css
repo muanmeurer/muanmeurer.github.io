@@ -285,3 +285,110 @@ footer p, footer span { font-size: 12px; color: #94a3b8; }
   .contact-section { padding: 34px 20px; }
   .post-view .summary { padding: 26px; }
 }
+
+/* Portfolio polish pass */
+body { background-attachment: fixed; }
+.nav-inner,
+.hero-section,
+.project-grid-section,
+.about-section {
+  width: min(1180px, calc(100% - 64px));
+}
+.hero-section {
+  min-height: 620px;
+  padding: 60px 0 60px;
+  gap: 58px;
+}
+.rover-hero-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+}
+.about-section {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto 48px;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 34px;
+  align-items: center;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(15,23,42,.72), rgba(15,23,42,.44));
+  border: 1px solid rgba(148,163,184,.24);
+  box-shadow: 0 22px 70px rgba(0,0,0,.24);
+}
+.about-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 24px;
+  border: 1px solid rgba(148,163,184,.3);
+  box-shadow: 0 18px 44px rgba(0,0,0,.32);
+}
+.about-copy h2 {
+  color: white;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -.04em;
+  margin-bottom: 16px;
+}
+.about-copy p { max-width: 850px; margin-bottom: 10px; }
+.project-grid-section { padding-top: 42px; }
+.post-view {
+  width: min(1080px, calc(100% - 80px));
+  margin: 62px auto 90px;
+}
+.post-view .summary {
+  padding: 52px 58px 30px;
+}
+.post-view .content {
+  padding: 0 58px 58px;
+}
+.post-view .summary > img {
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+.post-view h2 {
+  padding-top: 10px;
+  border-top: 1px solid rgba(148,163,184,.15);
+}
+.post-view h3 {
+  color: #e0f2fe;
+  margin: 26px 0 10px;
+  font-size: 18px;
+}
+.post-view .content img {
+  background: rgba(2,6,23,.5);
+}
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 18px 0 30px;
+}
+.figure-grid img {
+  margin: 0;
+  height: 245px;
+  object-fit: cover;
+}
+.caption {
+  color: #94a3b8 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  margin-top: -12px !important;
+  margin-bottom: 20px !important;
+}
+@media (max-width: 850px) {
+  .nav-inner,
+  .hero-section,
+  .project-grid-section,
+  .about-section { width: min(100% - 34px, 1180px); }
+  .about-section { grid-template-columns: 1fr; padding: 26px; }
+  .about-image img { width: 170px; height: 170px; }
+  .post-view { width: min(100% - 34px, 1080px); }
+  .post-view .summary, .post-view .content { padding-left: 28px; padding-right: 28px; }
+  .figure-grid { grid-template-columns: 1fr; }
+}

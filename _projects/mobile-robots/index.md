@@ -13,30 +13,20 @@ skills:
 main-image: "/cover.svg"
 ---
 
-## Objective
+## Introduction
 
-This project explored how to plan feasible 3D paths through obstacle-filled environments for a quadrotor-style robot. The objective was not just to find a collision-free line from start to goal, but to compare planning approaches that produce paths a real vehicle could more reasonably follow. The work focused on voxelized environments, motion primitives, Hybrid A*, RRT*, and trajectory smoothing.
+Autonomous robots need paths that are not only collision-free, but also physically reasonable to follow. This project focused on 3D motion planning for a quadrotor-style robot in obstacle-filled environments. The objective was to compare planning approaches that handle map geometry, vehicle motion constraints, and trajectory quality instead of only drawing a straight line from start to goal.
 
-## My Role
+## Methods
 
-I implemented and debugged the planning stack in Python, including map conversion, search logic, primitive generation, collision checking, visualization, and evaluation metrics. I worked through the practical problems that show up when planning code moves from simple examples to dense 3D maps: coordinate transforms, voxel indexing, obstacle representation, goal tolerance, runtime, path choppiness, and collisions introduced during smoothing.
+I implemented and debugged the planning stack in Python. PLY environments were converted into voxel occupancy grids, then searched using Hybrid A*, A* with motion primitives, and RRT*. The motion-primitive branch generated short feasible arcs so candidate paths respected heading and local motion constraints. The RRT* branch generated a geometric path and then applied minimum-snap-style smoothing. Each output was collision checked and evaluated using path length, planning time, smoothness or curve cost, and average obstacle clearance.
 
-## Design and Process
+![Mobile robots planner placeholder](/assets/images/portfolio/mobile-robots-placeholder.svg)
 
-The stack used PLY environments converted into occupancy grids. One branch used A* or Hybrid A* with motion primitives so that candidate paths respected heading and local motion constraints instead of making unrealistic point-to-point jumps. Another branch used RRT* to generate a geometric path, then applied minimum-snap-style smoothing to improve trajectory quality. Paths were evaluated using metrics such as total path length, planning time, smoothness or curve cost, and average clearance to obstacles.
+## Results
 
-## Outcome and Evaluation
+The comparison showed that each planner had a different failure mode. Hybrid A* and motion primitives produced more structured paths, but they required careful tuning of yaw bins, primitive duration, goal tolerance, and cost weights. RRT* with smoothing often produced cleaner trajectories, but smoothing could introduce collisions if the new curve cut through obstacles. The final stack made those tradeoffs visible through visualizations and performance metrics.
 
-The project made the tradeoffs between planners clear. Hybrid A* and motion primitives produced more structured behavior but required careful tuning of yaw bins, primitive duration, and cost terms. RRT* with smoothing produced cleaner paths in some cases, but smoothing had to be collision checked because a mathematically smooth path can cut through obstacles. This project demonstrates my ability to build, debug, and evaluate robotics algorithms while keeping the physical meaning of the outputs in mind.
+## Discussion
 
-## Skills Demonstrated
-
-- Built Python tools for 3D occupancy-grid planning and visualization
-- Implemented collision checking against voxelized PLY environments
-- Compared Hybrid A*, motion primitive planning, RRT*, and trajectory smoothing
-- Used path length, runtime, smoothness, and clearance metrics to evaluate performance
-- Debugged coordinate-frame, resolution, and obstacle-representation issues
-
-## Suggested Images to Add
-
-Add screenshots of the planned path, obstacle field, motion primitive visualization, RRT* tree, and final comparison chart.
+The project reinforced that planning quality is tied to modeling choices. Voxel resolution, obstacle representation, coordinate frames, collision-checking density, and cost-function design all changed the behavior of the planner. This project demonstrates robotics software development, algorithm evaluation, Python debugging, 3D visualization, and the ability to connect numerical metrics to physical robot behavior.

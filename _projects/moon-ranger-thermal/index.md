@@ -2,41 +2,31 @@
 layout: post
 order: 4
 title: "Moon Ranger Thermal Analysis"
-description: "Supported thermal analysis and design reasoning for lunar rover hardware, focusing on heat transfer, environmental constraints, margins, and design communication."
+description: "Built thermal models and simulations to evaluate lunar rover survivability, component temperatures, and power-system viability under extreme lunar operating conditions."
 skills:
   - Thermal analysis
   - Space systems
-  - ANSYS Thermal
   - Thermal Desktop
+  - Python simulation
   - Design documentation
   - Margin assessment
 main-image: "/cover.svg"
 ---
 
-## Objective
+## Introduction
 
-Moon Ranger is a lunar rover project where thermal behavior matters because the hardware must operate in an environment with extreme temperature swings, limited convection, radiation-dominated heat transfer, and strict power and mass constraints. The objective of this work was to support thermal design reasoning and communicate whether components could remain within acceptable temperature limits under expected operating conditions.
+Lunar rover hardware must survive extreme hot and cold cases with limited power, limited mass, and almost no convective cooling. Moon Ranger required thermal reasoning that connected environmental conditions, electronics reliability, battery performance, and mechanical design constraints. The objective was to evaluate whether the rover could maintain acceptable component temperatures and power-system margins during lunar operation.
 
-## My Role
+## Methods
 
-I contributed to the thermal analysis and documentation side of the project. The work involved understanding the system configuration, identifying important thermal paths, reviewing assumptions, and using analysis tools to reason about component temperatures and design margins. The project required more than running a simulation; it required interpreting what the model meant, what assumptions controlled the answer, and what design changes would be most effective.
+I worked on mechanical, thermal, and battery simulation tasks for the rover. The analysis used large Thermal Desktop models with more than 1,500 nodes to evaluate conduction, radiation, and internal heat dissipation across relevant operating cases. I also developed Python simulations to estimate terrain-driven power losses and connect thermal behavior to battery and mission-level energy constraints. The work required documenting assumptions, boundary conditions, and the design implications of the results.
 
-## Design and Process
+![Moon Ranger thermal placeholder](/assets/images/portfolio/moon-ranger-placeholder.svg)
 
-The analysis considered the major ways heat moves through lunar rover hardware: conduction through structure and interfaces, radiation to the environment, internal heat generation, and the absence of meaningful convective cooling. The design process emphasized conservative assumptions, clear boundary conditions, and traceable communication of results. Thermal results were used to evaluate whether components had enough margin or whether design changes such as insulation, surface finish changes, thermal straps, or layout adjustments should be considered.
+## Results
 
-## Outcome and Evaluation
+The models helped identify how component temperatures and energy margins changed across operating conditions. Terrain-driven power losses were estimated at roughly 20%, which made battery budgeting and thermal load assumptions more important to the system design. The thermal work also supported design trades involving layout, surface properties, insulation, heat paths, and operational limits.
 
-The work strengthened my ability to connect physics-based analysis with design decisions. A useful thermal model is only valuable if the team can understand the assumptions, trust the margins, and act on the results. This project demonstrates my ability to work on space hardware problems where mechanical design, heat transfer, environmental constraints, and documentation all interact.
+## Discussion
 
-## Skills Demonstrated
-
-- Applied heat-transfer principles to lunar rover hardware constraints
-- Used thermal-analysis tools to reason about component temperatures and margins
-- Communicated assumptions, boundary conditions, and design implications
-- Connected analysis results to practical hardware design decisions
-- Worked within a space-systems context where reliability and clarity matter
-
-## Suggested Images to Add
-
-Good images would include a thermal model screenshot, temperature contour plot, rover hardware render, thermal-control diagram, or one annotated figure showing major heat paths.
+The project showed that thermal analysis is only useful when it can influence design decisions. A model has to be clear enough for teammates to understand the assumptions, trust the margins, and act on the results. This project demonstrates heat-transfer analysis, space-systems thinking, simulation, documentation, and the ability to translate analytical results into mechanical and operational constraints.
