@@ -11,24 +11,24 @@ title: Muan Meurer - Portfolio # This is what shows up in the tab of the browser
 
 # Hero Section
 name: Muan Meurer
-headline: Mechanical & Mechatronics Engineer
+headline: Mechanical Engineering MS Student | Robotics, Autonomy & Systems Design
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  I lead teams that build robots that move dirt, close control loops, and pass real tests.
-  Mechanical engineer focused on robotics, autonomy, and systems-level design.
+  I build and lead engineering projects that turn messy physical problems into testable robotic systems.
+  My work focuses on mechanical design, autonomy, thermal analysis, prototyping, and cross-disciplinary integration.
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/headshot2.JPG
 
 
 # Link your resume
 # You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive 
-resume-url: https://docs.google.com/document/d/1p1MpwZ3no554naX8_1cMNBAk-593AU6g/edit?usp=sharing&ouid=111993368829815420925&rtpof=true&sd=true # or /assets/resume/resume.pdf
+resume-url: /assets/resume/Resume.pdf
 
 
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: https://www.linkedin.com/in/muanmeurer/    # https://www.linkedin.com/in/{your url slug} 
-  github:     # https://github.com/{your url slug} 
+  linkedin: muanmeurer    # https://www.linkedin.com/in/{your url slug} 
+  github: muanmeurer    # https://github.com/{your url slug} 
   stackoverflow:       # https://stackoverflow.com/users/{your url slug}
   medium:            # https://medium.com/@{your url slug} 
   x-twitter:   # https://x.com/{your url slug} 
@@ -46,7 +46,7 @@ skills:
     - SolidWorks (assemblies, drawings)
     - Fusion 360 (Autodesk)
     - Onshape
-    - Crei
+    - Creo
 
   - category: Structural, Thermal & System Analysis
     tools:

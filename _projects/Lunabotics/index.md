@@ -1,119 +1,42 @@
 ---
 layout: post
-title: "CMU NASA Lunabotics — \"Moon Miners\" Rover (2026)"
-description: "Building a competition rover to autonomously excavate and shape lunar regolith. I’m leading a first-year team from zero -> test-ready hardware: mechanism design, integration, manufacturing planning, and getting the full system to behave in the real world (not just in CAD)."
+order: 1
+title: "CMU Moon Miners: NASA Lunabotics Rover"
+description: "Led systems-level development for CMU's first-year Lunabotics team, building a rover for autonomous excavation and berm construction in a lunar-regolith-style test environment."
 skills:
-  - Systems integration
-  - Mechanism design (linkages, excavation, structures)
-  - CAD (SolidWorks/Onshape) + FEA
-  - Design reviews (SRR/PDR/CDR)
-  - Prototyping & Manufacturing Planning
-  - Test planning + Instrumentation
-main-image: "/images/lunabotics-hero.png"
+  - Systems engineering
+  - Mechanical design
+  - Design reviews
+  - Integration planning
+  - Test planning
+  - Leadership
+main-image: "/cover.svg"
 ---
 
-## The Mission
-<div style="text-align: center;">
-  {% include image-gallery.html images="images/group.jpg" height="420" %}
-  <div style="font-size: 10px;">
-    Moon Miners Team — CMU Lunabotics.
-  </div>
-</div>
+## Objective
 
-We’re building a rover for NASA’s Lunabotics competition — the goal isn’t a flashy demo. It’s a machine that can **move regolith, on purpose, repeatedly**, and do it with the kind of reliability you’d trust in a harsh environment.
+NASA Lunabotics is a robotics competition centered on autonomous excavation, regolith handling, and berm construction for future lunar infrastructure. Our objective was to build CMU Moon Miners from a first-year team into a functioning rover program with a clear design process, test arena, subsystem ownership, and hardware that could survive real integration instead of only looking good in CAD.
 
-The part that hooked me is that this is a systems problem disguised as a robot: excavation mechanics, power and thermal constraints, traction in ugly terrain, sensors that lie, and software that only works when the physical world agrees. The mission is simple to say and hard to execute: **dig, transport, and shape material like it matters**.
+## My Role
 
-{% include image-gallery.html images="images/lunabotics-hero.png" height="420" %}
-<span style="font-size: 10px">Hero image: replace with your rover render or a clean team photo.</span>
+I served as a project lead and helped connect mechanical, avionics, software, and systems work into one buildable robot. A large part of my job was turning competition rules and advisor feedback into requirements, interfaces, design reviews, and build priorities. That meant coordinating the System Requirements Review, Preliminary Design Review, and Critical Design Review, then using the feedback to make practical design changes before manufacturing and testing.
 
----
+## Design and Process
 
-## What I’m responsible for
-I’m helping drive the project from “ideas” to **hardware we can test**, which means living in the space between design, procurement, manufacturing, and integration.
+The rover was treated as a systems problem first. Excavation performance depended on more than the digging mechanism; it also depended on traction, power delivery, sensor placement, software assumptions, serviceability, and the ability to test the robot in a realistic arena. To reduce integration risk, we defined subsystem interfaces early and used reviews to catch problems before they became expensive. For example, feedback from reviewers pushed us toward path planning that respected heading and turning radius constraints, made the sensor mast field of view a first-order requirement, and simplified the emergency-stop architecture into a more direct and reliable power cutoff.
 
-- Turning requirements into a real architecture (what must work first vs what can wait)
-- Mechanical design + packaging: structure, mounts, interfaces, serviceability
-- Coordinating integration points between mechanical / avionics / software
-- Keeping us honest with reviews: clear assumptions, clear risks, clear next steps
+## Outcome and Evaluation
 
-If you’ve ever built a complex machine with a lot of smart people, you know the failure mode isn’t usually “no one is talented.” It’s **interfaces**. This role is basically: prevent interface pain early, and solve it fast when it shows up.
+The most important outcome was not a single part. It was the creation of a working engineering process for a new team: requirements, interface documents, trade studies, risk tracking, manufacturing plans, and test plans. The project also produced a full-scale test arena at the Robotics Innovation Center and moved the team from concept sketches to an integrated rover architecture ready for fabrication and validation. This project demonstrates my ability to lead ambiguous engineering work, communicate across disciplines, and make design decisions based on risk, testing, and system behavior.
 
----
+## Skills Demonstrated
 
-## The rover
-At a high level, the rover is built around three realities:
+- Led cross-functional coordination across mechanical, avionics, software, and systems teams
+- Converted external competition constraints into traceable design requirements
+- Organized review gates and used expert feedback to drive design changes
+- Managed integration risks involving power, sensing, mobility, excavation, and testing
+- Balanced technical ambition with schedule, manufacturability, and reliability
 
-1. **Excavation is brutal** — loads spike, material behaves inconsistently, and mechanism stiffness actually matters.
-2. **Traction and stability decide everything** — you can have the best digger in the world and still lose if you can’t hold your ground.
-3. **Integration is the product** — the robot only “exists” once the mechanical, electrical, and software stacks agree.
+## Suggested Images to Add
 
-### Key subsystems
-- **Excavation / material handling:** mechanism geometry, torque sizing, stiffness, wear surfaces
-- **Chassis / structure:** mounting strategy, load paths, repairability, mass discipline
-- **Sensor mast / perception mounting:** field-of-view needs vs structural constraints vs vibration
-- **Powertrain / mobility interfaces:** packaging, alignment, and mechanical-electrical handoffs
-
-{% include image-gallery.html images="images/mech-architecture.png" height="320" %}
-<span style="font-size: 10px">Add: one clean CAD render + one “real build” photo. That combo sells credibility fast.</span>
-
----
-
-## Design philosophy (how we avoid building a paper robot)
-A first-year team can’t afford to chase perfection in CAD. The strategy is:
-
-- **Prototype early** (even if it’s ugly)
-- Instrument tests so we’re not guessing
-- Freeze interfaces before we freeze aesthetics
-- Build in serviceability (because we will break things)
-
-This isn’t about being cautious — it’s about moving fast without lying to ourselves.
-
----
-
-## What I’m proud of so far
-A few early wins that mattered more than they sound:
-
-- We moved from “cool concepts” to **a real architecture** with interfaces we can build
-- We started treating testing like a first-class deliverable, not an afterthought
-- We built momentum: ordering, manufacturing planning, and integration rhythms
-
-The team energy is the best part. People want to win. You can feel it.
-
----
-
-## What’s hard (and why that’s the point)
-The hardest part is the “boring” part: getting a complex machine to work reliably when:
-
-- material clogs
-- tolerances stack up
-- sensors drift
-- vibrations loosen what you swore was tight
-- the schedule doesn’t care
-
-That’s the exact environment I want to be in. That’s where you learn.
-
----
-
-## What’s next
-Near-term goals are simple and aggressive:
-
-- Lock mechanical interfaces and the integration plan
-- Finish primary structure + excavation mechanism prototype
-- Build a test rig / test matrix for digging and mobility performance
-- Iterate based on data (not vibes)
-
-If everything goes right, we’ll have a rover that doesn’t just “function” — it **earns trust**.
-
----
-
-## Links
-- Team / project page: [Moon Miners (CMU Lunabotics)](https://example.com)
-- My portfolio: [muanmeurer.github.io](https://muanmeurer.github.io)
-
----
-
-## Media (optional)
-If you have a short clip of the mechanism moving, put it here. Doesn’t need to be cinematic — just real.
-
-{% include youtube-video.html id="PUT_YOUTUBE_ID_HERE" autoplay= "false"%}
+Replace the placeholder cover with one strong image, then add two or three images here if you have them: a rover CAD render, a team/build photo, the test arena, or a mechanism close-up.
