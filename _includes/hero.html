@@ -9,19 +9,23 @@
     <div class="hero-actions">
       <a class="primary-btn" href="#projects"><i class="fa-solid fa-rocket"></i> View My Projects</a>
       <a class="secondary-btn" href="{{ site.resume-url }}" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-lines"></i> Resume</a>
-      <a class="secondary-btn" href="#contact"><i class="fa-regular fa-envelope"></i> Contact Me</a>
+      <button class="secondary-btn email-button" type="button" data-email="{{ site.email | default: 'muanmeurer@gmail.com' }}"><i class="fa-regular fa-envelope"></i> Show Email</button>
     </div>
+    <p class="email-reveal" aria-live="polite"></p>
 
     {% if site.external-links %}
     <div class="social-row">
       {% if site.external-links.linkedin %}<a href="https://www.linkedin.com/in/{{ site.external-links.linkedin }}/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
       {% if site.external-links.github %}<a href="https://github.com/{{ site.external-links.github }}/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
-      <a href="#contact" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      <button class="email-icon-button" type="button" data-email="{{ site.email | default: 'muanmeurer@gmail.com' }}" aria-label="Show email"><i class="fa-regular fa-envelope"></i></button>
     </div>
     {% endif %}
   </div>
 
   <div class="hero-visual rover-hero-card">
-    <img src="{{ '/assets/images/portfolio/lunabotics-rover.jpg' | relative_url }}" alt="CMU Moon Miners Lunabotics rover in the test arena">
+    <video autoplay muted loop playsinline poster="{{ '/assets/images/portfolio/lunabotics-rover.jpg' | relative_url }}">
+      <source src="{{ '/assets/videos/lunabotics-digging.mp4' | relative_url }}" type="video/mp4">
+      <img src="{{ '/assets/images/portfolio/lunabotics-rover.jpg' | relative_url }}" alt="CMU Moon Miners Lunabotics rover in the test arena">
+    </video>
   </div>
 </section>
