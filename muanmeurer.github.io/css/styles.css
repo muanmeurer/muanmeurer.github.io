@@ -687,3 +687,63 @@ button { font: inherit; }
 @media (max-width: 850px) {
   .project-video.half { width: 100% !important; max-width: 100% !important; }
 }
+
+
+/* Final image, caption, and video alignment pass */
+.figure-card {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.figure-card figcaption,
+.caption {
+  width: 100%;
+  text-align: center !important;
+  color: #a8d8ff !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  font-weight: 750 !important;
+}
+.figure-card img,
+.figure-card video {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-self: center !important;
+}
+.video-card .project-video,
+.card-video {
+  width: 100% !important;
+  max-width: 520px !important;
+  margin: 0 auto 14px !important;
+  display: block !important;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #020617;
+}
+.video-pair .figure-card,
+.thermal-video-pair .figure-card {
+  min-height: 360px;
+}
+.coil-chart-pair .figure-card img,
+.tight-charts .figure-card img {
+  max-height: 235px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+.thermal-diagram img {
+  max-height: 240px !important;
+}
+.project-lede {
+  margin-top: -4px !important;
+  margin-bottom: 24px !important;
+}
+.bluf-card p {
+  font-size: 15.5px !important;
+  line-height: 1.55 !important;
+}
+@media (max-width: 850px) {
+  .video-pair .figure-card,
+  .thermal-video-pair .figure-card { min-height: auto; }
+  .video-card .project-video,
+  .card-video { max-width: 100% !important; }
+}
