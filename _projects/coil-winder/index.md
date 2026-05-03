@@ -1,31 +1,27 @@
 ---
 layout: post
 order: 2
-title: "Coil Winder: Automated Inductance Sensor Fabrication"
+title: "CoilBoy: Automated Variable-Diameter Coil Winder"
 description: "Designed a semi-automated coil winder for Westinghouse eVinci sensor R&D, producing repeatable 6–75 mm coils and meeting the &lt;3% inductance target in the strongest tested cases."
 skills:
   - Mechatronics
-  - Arduino control
-  - Mechanism design
+  - Coupled control
   - Stepper motors
-  - Prototyping
-  - Design iteration
+  - Rapid Prototyping
 main-image: "/cover.jpg"
 ---
 
 ## Introduction
 
 **Westinghouse needed faster in-house coil prototyping for LVDT sensor development.** Manual winding made pitch, wire tension, diameter, and repeatability hard to control across a large geometry range.
-
+<p>
 **Project objective:** build a semi-automated winder that could fabricate custom coils without retooling the entire machine.
-
+<p>
 Key requirements:
 
-- **6–75 mm** inner diameter range
-- **18–32 AWG** wire range
-- **1–600 turns**
-- **1–6 cm** coil length
-- Repeatable inductance results near the **<3% deviation target**
+<div class="figure-row single">
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Customer needs translated into measurable geometry, pitch, turn-count, and wire-gauge ranges.</figcaption></figure>
+  </div>
 
 ## Methods
 
@@ -38,13 +34,11 @@ I helped design the machine around a **lathe-style winding architecture**.
 - Removable coiling stock makes finished coils easier to remove without damage.
 
 <div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-winder.jpg" alt="Automated coil winder prototype"><figcaption>Final prototype with spindle drive, linear rail, controls, lead clamp, and interchangeable winding hardware.</figcaption></figure>
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-winder-prototype2.png" alt="Coil winder prototype CAD concept"><figcaption>Prototype layout showing the lathe chuck, removable stock, X-rail, nozzle, tensioning arm, pulleys, and spindle hardware.</figcaption></figure>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Concept work compared winding methods and pushed the design toward flexible geometry instead of fixed-geometry production.</figcaption></figure>
 </div>
 
 <div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Customer needs translated into measurable geometry, pitch, turn-count, and wire-gauge ranges.</figcaption></figure>
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Concept work compared winding methods and pushed the design toward flexible geometry instead of fixed-geometry production.</figcaption></figure>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-winder-prototype2.png" alt="Coil winder prototype CAD concept"><figcaption>Prototype layout showing the lathe chuck, removable stock, X-rail, nozzle, tensioning arm, pulleys, and spindle hardware.</figcaption></figure>
 </div>
 
 ## Results
@@ -66,5 +60,5 @@ The prototype demonstrated semi-automated winding across the required geometry a
 ## Discussion
 
 The project showed that coil repeatability is a **full mechatronic systems problem**. The final inductance depends on synchronized motion, stable tension, clean fixturing, reliable controls, and removal hardware that does not disturb the coil.
-
+<p>
 **Main takeaway:** Coil Boy met the core prototyping goal and identified the next improvement area: minimum-pitch winding at finer gauges.

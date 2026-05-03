@@ -12,10 +12,10 @@ title: Muan Meurer - Portfolio # This is what shows up in the tab of the browser
 # Hero Section
 name: Muan Meurer
 email: muanmeurer@gmail.com
-headline: Mechanical Engineering MS Student | Robotics, Autonomy & Systems Design
+headline: Mechanical Engineering MS Student | Robotics, Autonomy & Mechanical Design
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  I build and lead engineering projects that turn messy physical problems into testable robotic systems.
-  My work focuses on mechanical design, autonomy, thermal analysis, prototyping, and cross-disciplinary integration.
+  I build and lead engineering projects that advance us toward being an multi-planetary species.
+  My work focuses on mechanical design, autonomous trajectory generation, and cross-disciplinary integration.
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/headshot2.JPG
 

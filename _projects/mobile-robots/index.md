@@ -33,7 +33,7 @@ We built three Open3D environments and converted them into 3D occupancy grids. T
 The **Hybrid A*** pipeline generated short forward arcs from each state, removed arcs that failed collision checks, and scored the remaining candidates using travel, climb, steering, heading error, clearance, and progress terms.
 
 <div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/mobrob-easypathAstar.png" alt="Hybrid A star easy environment path"><figcaption>Hybrid A* result in the easy cave environment. The path is built from feasible primitive rollouts.</figcaption></figure>
+  <p> <figure class="figure-card compact"><img src="/assets/images/portfolio/mobrob-easypathAstar.png" alt="Hybrid A star easy environment path"><figcaption>Hybrid A* result in the easy cave environment. The path is built from feasible primitive rollouts.</figcaption></figure>
   <figure class="figure-card compact"><img src="/assets/images/portfolio/mobrob-motionprimatives.png" alt="Motion primitive candidates"><figcaption>Motion primitive candidates show the local dynamically feasible options evaluated from a state.</figcaption></figure>
 </div>
 
@@ -56,5 +56,5 @@ The methods exposed a real tradeoff. **Hybrid A*** often produced shorter paths,
 ## Discussion
 
 The main lesson was that planner metrics only matter when they connect back to flight behavior. Voxel resolution, obstacle representation, heading bins, primitive duration, collision-checking density, and smoothing all changed the final trajectory.
-
-**Main takeaway:** smoothness is useful, but it cannot replace clearance, feasibility, and collision-aware planning.
+<p>
+Smoothness is useful, but it cannot replace clearance, feasibility, and collision-aware planning.
