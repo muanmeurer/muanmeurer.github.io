@@ -2,7 +2,7 @@
 layout: post
 order: 2
 title: "CoilBoy: Automated Variable-Diameter Coil Winder"
-description: "Designed a semi-automated coil winder for Westinghouse eVinci sensor R&D, producing repeatable 6–75 mm coils and meeting the &lt;3% inductance target in the strongest tested cases."
+description: "Built a semi-automated coil winder for Westinghouse eVinci sensor R&D, producing repeatable coils across a 6–75 mm diameter range."
 skills:
   - Mechatronics
   - Coupled control
@@ -13,37 +13,32 @@ main-image: "/cover.jpg"
 
 ## Introduction
 
-**Westinghouse needed faster in-house coil prototyping for LVDT sensor development.** Manual winding made pitch, wire tension, diameter, and repeatability hard to control across a large geometry range.
-<p>
-**Project objective:** build a semi-automated winder that could fabricate custom coils without retooling the entire machine.
-<p>
-Key requirements:
+**Westinghouse needed faster in-house coil prototyping for LVDT sensor development.** Manual winding made pitch, wire tension, diameter, and repeatability hard to control.
+
+**Objective:** build a semi-automated winder that could fabricate custom coils without retooling the whole machine.
 
 <div class="figure-row single">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Customer needs translated into measurable geometry, pitch, turn-count, and wire-gauge ranges.</figcaption></figure>
-  </div>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Customer needs were translated into measurable geometry, pitch, turn-count, and wire-gauge ranges.</figcaption></figure>
+</div>
 
 ## Methods
 
 I helped design the machine around a **lathe-style winding architecture**.
 
-- A **NEMA 23 spindle** rotates an interchangeable mandrel.
-- A **NEMA 17 ball-screw X-axis** moves the wire nozzle to control pitch and length.
-- A lead clamp anchors the wire before automated winding begins.
-- A passive spring-arm tensioner stabilizes wire laydown across gauges.
-- Removable coiling stock makes finished coils easier to remove without damage.
+- **NEMA 23 spindle:** rotates an interchangeable mandrel.
+- **NEMA 17 X-axis:** drives a ball-screw carriage and wire nozzle.
+- **Lead clamp:** anchors the wire before winding.
+- **Passive tensioner:** stabilizes wire laydown across gauges.
+- **Removable stock:** lets coils come off without damage.
 
 <div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Concept work compared winding methods and pushed the design toward flexible geometry instead of fixed-geometry production.</figcaption></figure>
-</div>
-
-<div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-winder-prototype2.png" alt="Coil winder prototype CAD concept"><figcaption>Prototype layout showing the lathe chuck, removable stock, X-rail, nozzle, tensioning arm, pulleys, and spindle hardware.</figcaption></figure>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Concept work compared winding methods and prioritized flexible geometry over fixed-geometry production.</figcaption></figure>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-winder-prototype2.png" alt="Coil winder prototype CAD concept"><figcaption>Prototype layout showing chuck, removable stock, X-rail, nozzle, tensioning arm, pulleys, and spindle hardware.</figcaption></figure>
 </div>
 
 ## Results
 
-The prototype demonstrated semi-automated winding across the required geometry and wire-gauge range. Testing compared coils made with **18, 24, and 32 AWG** wire at minimum contact pitch and at **2 mm pitch**.
+The prototype demonstrated semi-automated winding across the required geometry and wire-gauge range.
 
 <div class="metric-grid">
   <div class="metric-card"><strong>6–75 mm</strong><span>coil inner diameter range</span></div>
@@ -52,13 +47,13 @@ The prototype demonstrated semi-automated winding across the required geometry a
   <div class="metric-card"><strong>&lt;3%</strong><span>target met at 2 mm pitch</span></div>
 </div>
 
-<div class="figure-row two chart-pair">
+<div class="figure-row two chart-pair tight-charts">
   <figure class="figure-card chart"><img src="/assets/images/portfolio/coil-induction-precision-data.png" alt="Coil induction precision data"><figcaption>2 mm pitch produced the most consistent inductance deviation across gauges.</figcaption></figure>
   <figure class="figure-card chart"><img src="/assets/images/portfolio/coil-induction-ratio-data.png" alt="Coil induction ratio data"><figcaption>Measured-to-predicted ratios showed which gauge, pitch, and diameter combinations deviated from theory.</figcaption></figure>
 </div>
 
 ## Discussion
 
-The project showed that coil repeatability is a **full mechatronic systems problem**. The final inductance depends on synchronized motion, stable tension, clean fixturing, reliable controls, and removal hardware that does not disturb the coil.
-<p>
-**Main takeaway:** Coil Boy met the core prototyping goal and identified the next improvement area: minimum-pitch winding at finer gauges.
+Coil repeatability is a **full mechatronic systems problem**. The final inductance depends on synchronized motion, stable tension, clean fixturing, reliable controls, and removal hardware that does not disturb the coil.
+
+**Main takeaway:** CoilBoy met the core prototyping goal and identified the next improvement area: minimum-pitch winding at finer gauges.

@@ -638,3 +638,52 @@ button { font: inherit; }
   .figure-row.two, .chart-pair, .metric-grid, .metric-grid.three-metrics { grid-template-columns: 1fr; }
   .project-video.half { width: 100%; }
 }
+
+/* Encoding + formatting repair pass */
+.video-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 18px 0 30px;
+}
+.video-center .project-video,
+.project-video.half {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.project-video.half {
+  width: min(100%, 560px) !important;
+  max-width: 560px !important;
+  display: block !important;
+}
+.post-view .content h2 {
+  display: block;
+  clear: both;
+}
+.post-view .content p,
+.post-view .content li {
+  max-width: 920px;
+}
+.figure-card figcaption,
+.caption {
+  color: #9fd3ff !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  font-weight: 700 !important;
+}
+.tight-charts .figure-card {
+  padding: 12px;
+}
+.tight-charts .figure-card img {
+  max-height: 245px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+.thermal-diagram img {
+  max-height: 300px !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+@media (max-width: 850px) {
+  .project-video.half { width: 100% !important; max-width: 100% !important; }
+}
