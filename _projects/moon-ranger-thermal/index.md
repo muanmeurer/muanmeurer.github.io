@@ -2,7 +2,7 @@
 layout: post
 order: 4
 title: "MoonRanger: Thermal Analysis"
-description: "Modeled whether MoonRanger’s transit garage prevented cold soak without creating overheating during powered checkouts and charging."
+description: "Modeled MoonRanger inside its transit garage to find the line between useful thermal buffering and a very expensive space oven."
 skills:
   - Thermal analysis
   - Space systems

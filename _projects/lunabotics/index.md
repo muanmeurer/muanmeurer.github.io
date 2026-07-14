@@ -2,7 +2,7 @@
 layout: post
 order: 1
 title: "CMU Lunabotics Rover (NASA)"
-description: "Led a first-year lunar robotics team from paper architecture into a working rover, test arena, and integration process."
+description: "Led CMU’s lunar excavation team from requirements and design reviews to an integrated rover digging in simulant—where CAD finally had to negotiate with dirt."
 skills:
   - Systems engineering
   - Mechanical design

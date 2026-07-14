@@ -2,7 +2,7 @@
 layout: post
 order: 3
 title: "Quadrotor Control: 3D Motion Planning"
-description: "Compared dynamics-aware Hybrid A* planning against RRT* plus minimum-snap smoothing for quadrotor navigation."
+description: "Compared two ways to keep a quadrotor out of cave walls: dynamics-aware Hybrid A* versus RRT* with minimum-snap smoothing."
 skills:
   - Python
   - Motion planning

@@ -3,12 +3,12 @@ name: Muan Meurer
 email: muanmeurer@gmail.com
 url: "https://muanmeurer.github.io"
 baseurl: ""
-headline: Robotics and Mechanical Engineer building hardware for autonomous and space systems
+headline: Mechanical engineer building the hardware between a good idea and a working robot
 description: >-
-  I lead multidisciplinary robotics projects and design, analyze, build, and test
-  electromechanical systems spanning lunar robots, spacecraft thermal analysis,
-  automated machinery, and motion planning.
-profile_image: ./assets/images/profile-image/headshot2.JPG
+  Carnegie Mellon Mechanical Engineering M.S. student working across CAD, analysis,
+  electronics, controls, and test—from lunar excavation and spacecraft thermal systems
+  to automated machinery and motion planning.
+profile_image: /assets/images/profile-image/headshot.jpg
 resume-url: /assets/resume/Resume.pdf
 
 external-links:
