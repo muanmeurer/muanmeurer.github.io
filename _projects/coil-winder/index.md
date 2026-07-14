@@ -1,8 +1,8 @@
 ---
 layout: post
 order: 2
-title: "CoilBoy: Automated Variable-Diameter Coil Winder"
-description: "Built a programmable coil winder for Westinghouse, synchronized spindle motion with wire travel, and validated repeatability across AWG32 and multi-layer coils."
+title: "CoilBoy: Programmable Coil Winder"
+description: "Designed and built a programmable coil winder for Westinghouse, coordinating spindle rotation and wire travel to produce repeatable single- and multi-layer coils."
 skills:
   - Mechatronics
   - Motion synchronization
@@ -17,10 +17,6 @@ main-image: "/cover.jpg"
 
 **Objective:** build a semi-automated winder that could change diameter, pitch, turn count, and wire gauge without rebuilding the machine around every coil.
 
-<div class="figure-row single">
-  <figure class="figure-card wide"><img src="/assets/images/portfolio/coilboy-full-assembly.jpg" alt="Complete CoilBoy automated coil winding machine"><figcaption>The final prototype combined spindle rotation, axial wire placement, interchangeable tooling, tension control, and a removable coil fixture on one test platform.</figcaption></figure>
-</div>
-
 ## Methods
 
 I helped design and integrate a **lathe-style winding architecture** that coupled spindle rotation to the nozzle’s linear travel.
@@ -28,7 +24,7 @@ I helped design and integrate a **lathe-style winding architecture** that couple
 - **NEMA 23 spindle:** rotated an interchangeable mandrel and set winding speed.
 - **NEMA 17 X-axis:** translated the wire nozzle along a ball screw to control pitch.
 - **Synchronized motion:** converted commanded turns and pitch into coordinated rotary and linear motion.
-- **Lead clamp and removable stock:** anchored the wire and allowed finished coils to come off without a fight.
+- **Lead clamp and removable stock:** anchored the wire and let finished coils come off without a wrestling match.
 - **Passive tensioner and nozzle:** guided wire across different diameters and gauges while limiting slack.
 
 The design targeted **6–75 mm inner diameters, 18–32 AWG wire, and 1–600 programmable turns**.
@@ -42,10 +38,10 @@ The design targeted **6–75 mm inner diameters, 18–32 AWG wire, and 1–600 p
 
 <div class="video-center coil-results-video">
   <figure class="figure-card video-card">
-    <video class="project-video card-video" controls muted playsinline preload="metadata" poster="/assets/images/portfolio/coilboy-winding-closeup.jpg">
+    <video class="project-video card-video" controls muted playsinline preload="metadata" poster="/assets/images/portfolio/coilboy-results-poster.jpg">
       <source src="/assets/videos/coilboy-multilayer-winding.mp4" type="video/mp4">
     </video>
-    <figcaption>Multi-layer winding during final validation. The layer transition also made the remaining alignment and tension-control weaknesses easy to see.</figcaption>
+    <figcaption>CoilBoy winding a finished coil during final demonstration. The synchronized spindle and traverse handled the repetitive work; the wire still reserved the right to be difficult.</figcaption>
   </figure>
 </div>
 
@@ -87,27 +83,12 @@ The final test campaign covered **five single-layer and two multi-layer configur
 </table>
 </div>
 
-The strongest single-layer result was the **25 mm, 20-turn AWG32 coil**, with a 1.07% average difference and a 4/4 pass rate. The 75 mm and 6 mm, 20-turn AWG32 configurations also passed all four runs. The 6 mm, 40-turn coil averaged 2.71% but passed only three of four runs, showing that a good average can still hide one bad winding.
+## Discussion
 
-Both multi-layer configurations passed every run, with average differences of **1.91% and 2.00%**. The clear failure was the **25 mm, 20-turn AWG24 coil**: only one of four runs landed within ±3%, and the average difference rose to 5.41%.
+CoilBoy met Westinghouse’s **±3% repeatability target** for the AWG32 single-layer coils and both multi-layer configurations. The best result was the 25 mm, 20-turn AWG32 coil at **1.07% average difference**; the AWG24 case was the outlier at **5.41%**, pointing to wire stiffness, nozzle resistance, tension, and placement—not motor control—as the main limits.
 
-## Conclusions
+Wheeler’s formula tracked the measured coils better than the long-coil approximation, while the successful multi-layer runs showed that much higher inductance did not require giving up repeatability. The next useful iteration is mostly mechanical: improve tension control and nozzle alignment, calibrate pitch by wire gauge and mandrel diameter, then retest AWG24 and the 6 mm configurations.
 
-CoilBoy met the core R&D need: it reliably reproduced **AWG32 single-layer coils and both multi-layer configurations** without rebuilding the machine for each geometry. Not all copper was equally cooperative, but the useful operating range was clear.
-
-- **AWG32 was the most reliable wire** across the tested diameters.
-- **Mid-sized and larger mandrels were easier to control** than the smallest 6 mm geometry.
-- **Thicker AWG24 wire increased variation**, likely through greater wire stiffness, nozzle resistance, deflection, and placement inconsistency.
-- **Coil-length variation tracked inductance variation**, pointing to pitch and wire placement as major remaining error sources.
-- **Wheeler’s formula matched measured behavior better than the long-coil formula** and is the better prediction model for this machine.
-- **Multi-layer winding was successful**, producing much higher inductance while remaining repeatable.
-
-## Next Steps
-
-The motors followed commands reliably; the wire was the less obedient half of the system. The next iteration should focus on the wire path rather than simply adding more control complexity.
-
-- Improve tension control so wire feeds consistently through layer transitions.
-- Calibrate pitch and nozzle travel separately for each wire gauge and mandrel diameter.
-- Improve nozzle alignment to reduce lateral placement error.
-- Add more repeated multi-layer trials to strengthen the validation set.
-- Retest AWG24 and the 6 mm configurations after calibration, since those exposed the main weaknesses.
+<div class="figure-row single coilboy-award-photo">
+  <figure class="figure-card wide"><img src="/assets/images/portfolio/coilboy-best-prototype.jpg" alt="CoilBoy team holding Best Prototype awards at the Carnegie Mellon Spring Design Expo"><figcaption>CoilBoy received the Best Prototype award at Carnegie Mellon’s 2026 Spring Design Expo—a pleasant confirmation that the machine worked outside our own test spreadsheet.</figcaption></figure>
+</div>
