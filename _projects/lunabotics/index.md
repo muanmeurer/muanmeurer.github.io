@@ -50,13 +50,13 @@ I was **project lead** across mechanical, avionics, software, and systems.
     <video class="project-video card-video" controls muted playsinline poster="/assets/images/portfolio/lunabotics-digging-poster.png">
       <source src="/assets/videos/lunabotics-digging.mp4" type="video/mp4">
     </video>
-    <figcaption>**EXCAVATION** testing showed how the bucket ladder interacted with the simulant.</figcaption>
+    <figcaption>EXCAVATION testing showed how the bucket ladder interacted with the simulant.</figcaption>
   </figure>
   <figure class="figure-card video-card">
     <video class="project-video card-video" controls muted playsinline poster="/assets/images/portfolio/lunabotics-digging-poster.png">
       <source src="/assets/videos/lunabotics-proof-of-life.mp4" type="video/mp4">
     </video>
-    <figcaption>**DEPLOYMENT AND TRAVERSAL**pProof-of-life testing validated full rover function.</figcaption>
+    <figcaption>DEPLOYMENT AND TRAVERSAL Proof-of-life testing validated full rover function.</figcaption>
   </figure>
 </div>
 
