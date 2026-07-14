@@ -1,31 +1,52 @@
 <section class="hero-section">
-  <div class="hero-bg-orbit"></div>
+  <div class="hero-bg-orbit" aria-hidden="true"></div>
+
   <div class="hero-copy">
-    <p class="eyebrow">MECHATRONICS ENGINEER</p>
-    <h1>Hi, I’m <span>Muan.</span></h1>
-    <h2>{{ site.headline }}</h2>
-    <p class="hero-description">{{ site.description }}</p>
+    <p class="eyebrow">ROBOTICS &amp; MECHATRONICS ENGINEER</p>
+    <h1>I build robots that leave the lab.</h1>
+    <p class="hero-lede">Mechanical engineer focused on hardware integration, analysis, and autonomous systems for space and field robotics.</p>
+
+    <div class="hero-proof" aria-label="Selected engineering experience">
+      <div class="proof-item">
+        <strong>Project Lead</strong>
+        <span>CMU Moon Miners</span>
+      </div>
+      <div class="proof-item">
+        <strong>Space Systems</strong>
+        <span>MoonRanger thermal analysis</span>
+      </div>
+      <div class="proof-item">
+        <strong>Build + Test</strong>
+        <span>CAD, FEA, controls, integration</span>
+      </div>
+    </div>
 
     <div class="hero-actions">
-      <a class="primary-btn" href="#projects"><i class="fa-solid fa-rocket"></i> View My Projects</a>
+      <a class="primary-btn" href="#projects"><i class="fa-solid fa-arrow-down"></i> Explore My Work</a>
       <a class="secondary-btn" href="{{ site.resume-url }}" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-lines"></i> Resume</a>
-      <button class="secondary-btn email-button" type="button" data-email="{{ site.email | default: 'muanmeurer@gmail.com' }}"><i class="fa-regular fa-envelope"></i> Show Email</button>
+      <button class="secondary-btn email-button" type="button" data-email="{{ site.email | default: 'muanmeurer@gmail.com' }}"><i class="fa-regular fa-envelope"></i> Contact</button>
     </div>
+
     <p class="email-reveal" aria-live="polite"></p>
 
     {% if site.external-links %}
     <div class="social-row">
-      {% if site.external-links.linkedin %}<a href="https://www.linkedin.com/in/{{ site.external-links.linkedin }}/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
-      {% if site.external-links.github %}<a href="https://github.com/{{ site.external-links.github }}/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
-      <button class="email-icon-button" type="button" data-email="{{ site.email | default: 'muanmeurer@gmail.com' }}" aria-label="Show email"><i class="fa-regular fa-envelope"></i></button>
+      {% if site.external-links.linkedin %}<a href="https://www.linkedin.com/in/{{ site.external-links.linkedin }}/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+      {% if site.external-links.github %}<a href="https://github.com/{{ site.external-links.github }}/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
     </div>
     {% endif %}
   </div>
 
   <div class="hero-visual rover-hero-card">
-    <video autoplay muted loop playsinline poster="{{ '/assets/images/portfolio/lunabotics-digging-poster.png' | relative_url }}">
-      <source src="{{ '/assets/videos/lunabotics-proof-of-life.mp4' | relative_url }}" type="video/mp4">
-      <img src="{{ '/assets/images/portfolio/lunabotics-rover.jpg' | relative_url }}" alt="CMU Moon Miners Lunabotics rover in the test arena">
-    </video>
+    <div class="hero-media-shell">
+      <video autoplay muted loop playsinline poster="{{ '/assets/images/portfolio/lunabotics-digging-poster.png' | relative_url }}" aria-label="CMU Moon Miners Lunabotics rover operating in a test arena">
+        <source src="{{ '/assets/videos/lunabotics-proof-of-life.mp4' | relative_url }}" type="video/mp4">
+        <img src="{{ '/assets/images/portfolio/lunabotics-rover.jpg' | relative_url }}" alt="CMU Moon Miners Lunabotics rover in the test arena">
+      </video>
+      <div class="hero-media-label">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div><strong>Sisyphus</strong><span>CMU lunar excavation rover</span></div>
+      </div>
+    </div>
   </div>
 </section>
