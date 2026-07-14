@@ -1046,3 +1046,40 @@ button { font: inherit; }
   .hero-proof { grid-template-columns: 1fr; }
   .proof-item { min-height: 0; }
 }
+
+
+/* MoonRanger FEA / manufacturing / EMI project */
+@media (min-width: 1051px) {
+  .grid-container { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.moonranger-modal-pair .figure-card img {
+  max-height: 520px !important;
+}
+.moonranger-stress-figure,
+.moonranger-orientation {
+  justify-items: center;
+}
+.moonranger-stress-figure .figure-card {
+  width: min(100%, 820px);
+}
+.moonranger-orientation .figure-card {
+  width: min(100%, 920px);
+}
+.moonranger-orientation .figure-card img {
+  max-height: 500px !important;
+}
+.shroud-stress-pair .figure-card img {
+  width: 100% !important;
+  max-height: 360px !important;
+}
+.ferrite-intro-row .figure-card img,
+.ferrite-gallery .figure-card img {
+  max-height: 290px !important;
+}
+@media (max-width: 850px) {
+  .moonranger-modal-pair .figure-card img,
+  .moonranger-orientation .figure-card img,
+  .shroud-stress-pair .figure-card img {
+    max-height: none !important;
+  }
+}
