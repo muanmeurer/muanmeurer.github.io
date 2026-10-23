@@ -1797,3 +1797,13 @@ html { background-color:#030712; }
     grid-template-columns:minmax(0,1fr);
   }
 }
+
+/* MoonRanger introduction has no side image: use the entire available width. */
+@media (min-width:791px) {
+  .editorial-project.moonranger-structures-story > .story-intro {
+    display:block;
+  }
+  .editorial-project.moonranger-structures-story > .story-intro .story-intro-copy {
+    width:100%; max-width:100%;
+  }
+}
