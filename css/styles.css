@@ -1271,3 +1271,170 @@ button { font: inherit; }
 @media(max-width:1100px){ .hero-section { grid-template-columns:1fr; width:min(100% - 44px, 900px); } .hero-visual { justify-self:center; width:min(100%,720px); } .rover-hero-card video { max-height:420px; } }
 @media(max-width:850px){ .about-section { grid-template-columns:1fr; } .about-section .about-image { width:min(264px,75vw); } .post-view .content .figure-row.two .figure-card img { height:auto !important; max-height:360px !important; } }
 @media(max-width:620px){ .hero-section { width:min(100% - 30px,900px); } .hero-skills-block { grid-template-columns:20px minmax(0,1fr); gap:7px; } .hero-skills { gap:6px; } .hero-skill-column .skill-bubble { font-size:11px; padding:8px 3px; min-height:38px; } .hero-skill-column h2 { font-size:12px; } .hero-actions { margin-top:22px; } .post-view .content { font-size:16px; } }
+
+/* ===== 2026-10-23 design review: single coherent homepage grid ===== */
+.hero-section {
+  width: min(1200px, calc(100% - 56px));
+  min-height: 0;
+  margin: 0 auto 56px;
+  padding: clamp(46px, 5vw, 72px) 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr);
+  grid-template-areas: "copy video" "skills skills";
+  column-gap: clamp(34px, 4vw, 66px);
+  row-gap: 34px;
+  align-items: center;
+}
+.hero-copy { grid-area: copy; min-width: 0; }
+.hero-copy h1 { font-size: clamp(52px, 5.3vw, 76px); margin: 0 0 14px; }
+.hero-degree { font-size: clamp(19px, 1.6vw, 24px); margin-bottom: 25px; }
+.hero-lede { font-size: clamp(17px, 1.4vw, 20px); line-height: 1.62; max-width: 590px; }
+.hero-copy .eyebrow { font-size: 13px; letter-spacing: .09em; }
+.hero-actions { margin: 29px 0 0; gap: 12px; }
+.hero-actions .primary-btn, .hero-actions .secondary-btn { min-height: 50px; padding: 0 18px; font-size: 15px; }
+.hero-copy .social-row { margin-top: 23px; }
+.hero-visual { grid-area: video; width: 100%; max-width: 550px; justify-self: end; margin: 0; align-self: center; }
+.hero-media-shell { padding: 6px; border-radius: 22px; }
+.rover-hero-card video {
+  width: 100%; max-height: none; height: auto;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: contain !important;
+  display: block; border-radius: 16px;
+  background: #030712;
+}
+.hero-video-caption { margin: 12px 3px 0; color: #b7cde7; font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: .11em; display: flex; align-items: center; gap: 10px; }
+.hero-video-caption-dot { width: 7px; height: 7px; display: inline-block; flex-shrink: 0; border-radius: 50%; background: #fa7284; box-shadow: 0 0 12px rgba(250,114,132,.35); }
+.hero-caption-divider { opacity: .32; }
+.hero-skills-block {
+  grid-area: skills;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 18px; align-items: stretch;
+  margin: 0; padding: 23px 24px 22px 17px;
+  border: 1px solid rgba(108,148,195,.25);
+  border-radius: 22px;
+  background: linear-gradient(110deg,rgba(13,29,52,.72),rgba(10,24,45,.37));
+}
+.hero-skills-side-label { font-size: 13px; align-self: center; }
+.hero-skills { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 27px; width: 100%; max-width: none; margin: 0; }
+.hero-skill-column { min-width:0; display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
+.hero-skill-column + .hero-skill-column { border-left: 1px solid rgba(121,155,200,.16); padding-left: 21px; }
+.hero-skill-column h2 { color:#ff788b; font-size: 19px; letter-spacing: -.025em; margin:0; line-height:1.3; text-align:left; }
+.hero-skill-column .skill-tags { display:flex; flex-wrap:wrap; justify-content:flex-start; align-items:flex-start; gap:8px; width:100%; }
+.hero-skill-column .skill-bubble {
+  display:inline-flex; width:auto; min-width:0; min-height:35px; max-width:100%;
+  padding:8px 13px; font-size: 12.5px; font-weight:650; line-height:1.3;
+  border-radius:999px; text-align:center; white-space:normal;
+  border-color:rgba(110,157,216,.34); background:rgba(19,46,83,.41);
+}
+.hero-skill-column .skill-bubble:hover { background:rgba(50,94,153,.35); border-color:#89bbef; }
+.hero-bg-orbit { top:-110px; left:-170px; pointer-events:none; }
+
+/* Project pages: shared visual rhythm, with images retaining natural proportions. */
+.post-view { width: min(1120px,calc(100% - 58px)); margin-top: 50px; }
+.post-view .summary { padding: 44px clamp(28px,4.7vw,56px) 22px; }
+.post-view .content { padding: 0 clamp(28px,4.7vw,56px) 58px; }
+.post-view .content > h2,
+.post-view .content > h3,
+.post-view .content > p,
+.post-view .content > ul,
+.post-view .content > ol { width:min(100%,82ch); margin-left:auto; margin-right:auto; }
+.post-view .content > h2 { font-size:clamp(27px,2.4vw,32px); }
+.post-view .content .figure-row.two .figure-card img {
+  display:block; width:auto !important; height:auto !important;
+  max-width:100% !important; max-height:370px !important; object-fit:contain !important;
+  margin: 0 auto 12px !important;
+}
+.post-view .content .figure-row.two .figure-card video { width:100% !important; height:auto !important; max-height:340px !important; object-fit:contain !important; }
+.post-view .content .figure-card { padding: 12px; }
+.post-view .content .figure-card figcaption { padding: 6px 10px 5px; font-size:13px !important; font-weight:600 !important; color:#b5d1ee !important; }
+.post-view .content h2 { color:#a9d6ff; }
+.post-view .content h3 { color:#f6f9ff; }
+.post-view .content p, .post-view .content li { line-height:1.77; }
+.post-view .content ul li::marker { color:#66aafb; }
+.post-view .content .kingfisher-intro-copy h2 { color:#e6f4ff; }
+.post-view .content .kingfisher-intro { align-items:center; }
+.post-view .content .kingfisher-cad-panel img,
+.post-view .content .kingfisher-flowchart-panel img { width:100% !important; max-height:none !important; height:auto !important; object-fit:contain !important; }
+.post-view .content .kingfisher-coming-soon { color:#a4cfff; }
+
+/* Thermal project follows Kingfisher's editorial split rather than a long report. */
+.thermal-project { max-width:1000px; margin: 8px auto 0; }
+.thermal-intro { display:grid; grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr); gap:clamp(22px,3vw,38px); align-items:center; margin:4px 0 32px; }
+.thermal-intro-copy { min-width:0; }
+.thermal-eyebrow { color:#ff899a !important; font-size:12px !important; font-weight:800; letter-spacing:.12em; line-height:1.5; margin: 0 0 13px; }
+.thermal-intro-copy h2 { color:#f7fbff !important; font-size:clamp(26px,2.6vw,33px); margin:0 0 17px; padding:0; border:0; }
+.thermal-intro-copy p { font-size:16px; line-height:1.72; margin-bottom:15px; }
+.thermal-feature-image { min-width:0; margin:0; padding:12px; background:rgba(4,13,28,.85); border:1px solid rgba(110,164,223,.29); border-radius:19px; }
+.post-view .content .thermal-feature-image img { display:block; width:100% !important; height:auto !important; max-height:380px !important; object-fit:contain !important; margin:0 !important; border:0; border-radius:9px; }
+.thermal-feature-image figcaption { color:#b3d0eb; text-align:center; font-size:13px; font-weight:600; line-height:1.55; padding:10px 3px 0; }
+.thermal-project > h2 { margin:38px 0 15px; padding-top:22px; border-top:1px solid rgba(96,165,250,.21); color:#a9d6ff; font-size:29px; }
+.thermal-project > p { max-width:80ch; }
+.thermal-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:24px 0 27px; }
+.thermal-fact { background:linear-gradient(160deg,rgba(24,46,77,.75),rgba(10,26,49,.72)); border:1px solid rgba(120,160,215,.22); border-radius:14px; padding:16px 17px; display:flex; flex-direction:column; gap:7px; }
+.thermal-fact span, .thermal-result-strip span { color:#ff91a0; font-size:11px; font-weight:800; letter-spacing:.11em; }
+.thermal-fact strong { color:#f8fbff; font-size:20px; font-weight:700; }
+.thermal-fact small { color:#aec4df; font-size:12px; line-height:1.45; }
+.thermal-result-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin:24px 0 30px; padding:20px 4px; border-top:1px solid rgba(119,169,226,.32); border-bottom:1px solid rgba(119,169,226,.32); }
+.thermal-result-strip > div { display:flex; flex-direction:column; gap:9px; padding:4px 19px; }
+.thermal-result-strip > div+div { border-left:1px solid rgba(119,169,226,.19); }
+.thermal-result-strip strong { color:#edf7ff; font-size:clamp(17px,1.8vw,23px); letter-spacing:-.03em; }
+.post-view .content .thermal-video-pair .figure-card { width:100%; }
+.post-view .content .thermal-video-pair .project-video { width:100% !important; max-width:none !important; max-height:none !important; height:auto !important; aspect-ratio:16/9; }
+.post-view .content .thermal-result-figures { grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); align-items:center; }
+.post-view .content .thermal-result-figures .figure-card { width:100%; max-width:100%; }
+.post-view .content .thermal-result-figures .figure-card img { width:auto !important; height:auto !important; max-height:365px !important; }
+
+@media (max-width: 980px) {
+  .hero-section { grid-template-columns:minmax(0,1fr) minmax(0,1fr); width:min(100% - 44px,900px); column-gap:28px; }
+  .hero-copy h1 { font-size:clamp(42px,6.3vw,64px); }
+  .hero-copy .eyebrow { font-size:11px; }
+  .hero-lede { font-size:17px; }
+  .hero-actions { flex-wrap:wrap; }
+  .hero-actions .primary-btn,.hero-actions .secondary-btn { min-height:45px; font-size:13px; padding:0 12px; }
+  .hero-skills { gap:12px; }
+  .hero-skill-column+.hero-skill-column { padding-left:14px; }
+  .hero-skill-column h2 { font-size:17px; }
+  .hero-skill-column .skill-bubble { font-size:12px; padding:8px 10px; }
+}
+@media (max-width: 740px) {
+  .hero-section { width:min(100% - 32px,610px); display:flex; flex-direction:column; align-items:stretch; gap:24px; padding-top:38px; margin-bottom:44px; }
+  .hero-copy h1 { font-size:clamp(46px,10vw,68px); }
+  .hero-visual { width:100%; max-width:none; align-self:stretch; }
+  .hero-skills-block { grid-template-columns:18px minmax(0,1fr); gap:9px; padding:18px 12px; }
+  .hero-skills { grid-template-columns:1fr; gap:17px; }
+  .hero-skill-column { gap:8px; }
+  .hero-skill-column+.hero-skill-column { border-left:0; border-top:1px solid rgba(121,155,200,.18); padding:14px 0 0; }
+  .hero-skill-column h2 { font-size:18px; }
+  .hero-skill-column .skill-bubble { font-size:12px; min-height:34px; }
+  .thermal-intro { grid-template-columns:1fr; }
+  .thermal-facts,.thermal-result-strip { grid-template-columns:1fr; }
+  .thermal-result-strip > div { padding:13px 16px; }
+  .thermal-result-strip > div+div { border-left:0; border-top:1px solid rgba(119,169,226,.19); }
+  .post-view .content .thermal-result-figures { grid-template-columns:1fr; }
+  .post-view { width:min(100% - 24px,1120px); }
+  .post-view .summary, .post-view .content { padding-left:20px; padding-right:20px; }
+}
+
+/* Final image sizing: consistent ceiling without stretching or cropping media. */
+html { background-color:#030712; }
+.post-view .summary > img.post-hero-img {
+  max-width:min(100%,760px) !important;
+  max-height:350px !important;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+  margin:10px auto 22px !important;
+}
+@media (max-width:740px) {
+  .post-view .summary > img.post-hero-img { max-height:290px !important; }
+  .hero-copy .social-row { margin-top:14px; }
+}
+
+.thermal-approach { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.8fr); gap:28px; align-items:center; margin:29px 0 6px; }
+.thermal-approach h2 { color:#a9d6ff; font-size:29px; margin:0 0 13px; padding-top:20px; border-top:1px solid rgba(96,165,250,.21); }
+.thermal-approach p { margin:0; }
+.thermal-loads { margin:0; border:1px solid rgba(110,164,223,.29); background:rgba(4,13,28,.75); border-radius:16px; padding:13px; }
+.post-view .content .thermal-loads img { width:100% !important; max-height:250px !important; height:auto !important; object-fit:contain !important; margin:0 !important; border:0; border-radius:8px; }
+.thermal-loads figcaption { font-size:12px; color:#b3d0eb; text-align:center; padding:8px 5px 2px; line-height:1.5; }
+@media(max-width:740px) { .thermal-approach { grid-template-columns:1fr; } }

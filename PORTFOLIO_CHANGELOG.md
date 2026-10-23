@@ -68,3 +68,12 @@
 - Changed Featured Work title to “Rovers, Robots, Machines, and Doodads.”
 - Restored detailed Lunabotics narrative and retained original project media.
 - Reduced Westinghouse requirements image width about 30%; normalized project image frames and refined heading/paragraph contrast.
+
+## October 23, 2026 — Layout and thermal narrative review
+- Homepage hero restricted to the navigation's 1,200-pixel content width; balanced introduction and rover video side by side instead of vertically centering the video against a long skills stack.
+- Moved Mechanical / Controls / Verification into a separate full-width, responsive skill band with larger red section labels and wrapping project-linked pills.
+- Reduced the hero video to a natural 16:9 composition, kept it uncropped, and added an understated footage caption.
+- Set consistent, uncropped limits for project covers and comparison figures; adjusted text and heading contrast while preserving the dark-blue visual identity.
+- Rewrote MoonRanger Thermal in the shorter, personable Kingfisher narrative pattern: the design question, finite-difference Thermal Desktop approach, real duty-cycle results, and operational takeaway. Retained all original technical images and both videos.
+- Corrected invalid footer HTML. Project order and all previous edits remain unchanged.
+- Built a local browser preview of the resulting HTML/CSS and checked desktop, laptop and mobile layouts for horizontal overflow. This is a browser preview, not a full Jekyll deployment build.
