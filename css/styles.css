@@ -1095,3 +1095,139 @@ button { font: inherit; }
 @media(max-width:540px){.hero-skills{gap:7px}.hero-skill-column h2{font-size:12px}.skill-bubble{font-size:10px;padding:9px 5px}.hero-highlights span{font-size:12px}}
 
 .coilboy-large-diagram {grid-template-columns:minmax(0,1fr)!important;max-width:980px;margin:24px auto 36px}.coilboy-large-diagram img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important}
+
+/* October 2026 homepage refinement — scoped to homepage sections */
+.hero-section {
+  width: min(100% - 56px, 1490px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(28px, 3vw, 54px);
+  align-items: center;
+}
+.hero-copy { min-width: 0; }
+.hero-copy h1 { margin-bottom: 10px; }
+.hero-degree {
+  color: #d3deed;
+  font-size: clamp(17px, 1.45vw, 22px);
+  font-weight: 650;
+  letter-spacing: .01em;
+  margin: 0 0 26px;
+}
+.hero-skills-block {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 16px;
+  margin: 30px 0 28px;
+}
+.hero-skills-side-label {
+  color: #ff6677;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .24em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  justify-self: center;
+  text-shadow: 0 0 24px rgba(255,85,105,.12);
+}
+.hero-skills {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(8px, 1.2vw, 17px);
+  max-width: 650px;
+}
+.hero-skill-column { align-items: center; gap: 9px; }
+.hero-skill-column h2 { font-size: 14px; margin: 0 0 4px; }
+.hero-skill-column .skill-bubble {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  min-width: min(100%, 128px);
+  min-height: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 11px;
+  font-size: 11px;
+  line-height: 1.25;
+  border-color: rgba(111,161,226,.33);
+  background: rgba(26,49,85,.32);
+}
+.hero-visual { width: 100%; max-width: none; }
+.hero-media-shell { width: 100%; }
+.rover-hero-card video {
+  width: 100%;
+  aspect-ratio: 4 / 3 !important;
+  object-fit: cover !important;
+}
+.project-grid-section .section-intro {
+  text-align: center;
+  max-width: 850px;
+  margin: -12px auto 34px;
+}
+@media (max-width: 1100px) {
+  .hero-section { grid-template-columns: 1fr; width: min(100% - 44px, 900px); }
+  .hero-visual { max-width: 900px; }
+  .hero-skills { max-width: 680px; }
+  .rover-hero-card video { aspect-ratio: 16 / 9 !important; }
+}
+@media (max-width: 620px) {
+  .hero-section { width: min(100% - 30px, 900px); }
+  .hero-skills-block { grid-template-columns: 20px minmax(0,1fr); column-gap: 8px; }
+  .hero-skills { gap: 6px; }
+  .hero-skill-column { gap: 7px; }
+  .hero-skill-column h2 { font-size: 12px; }
+  .hero-skill-column .skill-bubble { min-width: 0; width: 100%; font-size: 10px; padding: 8px 4px; }
+  .hero-skills-side-label { font-size: 10px; }
+  .rover-hero-card video { aspect-ratio: 16 / 9 !important; }
+}
+
+/* October portfolio polish: frames follow media rather than full grid width. */
+.post-view .content .figure-row {
+  justify-items: center;
+  align-items: start;
+}
+.post-view .content .figure-card {
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+  justify-self: center;
+  padding: 8px;
+}
+.post-view .content .figure-card img {
+  display: block;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto 8px !important;
+}
+.post-view .content .figure-card figcaption {
+  max-width: 660px !important;
+  padding: 0 8px 4px;
+}
+/* Large diagrams still get room to be readable, without oversized side gutters. */
+.post-view .content .coilboy-large-diagram .figure-card { width: fit-content; max-width: 100%; }
+.post-view .content .coilboy-large-diagram .figure-card img { width: auto !important; max-height: 620px !important; }
+/* Award is a supporting result, not a full-width hero. */
+.post-view .content .coilboy-award-photo .figure-card { width: fit-content; max-width: min(100%, 490px); }
+.post-view .content .coilboy-award-photo .figure-card img { width: auto !important; max-height: 340px !important; }
+/* Video frames remain comfortably sized. */
+.post-view .content .video-card { width: min(100%, 740px); }
+.post-view .content .video-card video { width: 100% !important; }
+
+
+/* Kingfisher project: dark editorial split-layout with technical visual emphasis */
+.post-view .content .kingfisher-project { max-width: 1140px; margin: 8px auto 0; }
+.kingfisher-intro { display: grid; grid-template-columns: minmax(0, .93fr) minmax(0, 1.07fr); gap: clamp(22px, 3.4vw, 52px); align-items: center; margin: 10px 0 36px; }
+.kingfisher-intro-copy { min-width: 0; }
+.kingfisher-eyebrow { color: #65b5ff; font-size: .8rem; font-weight: 700; letter-spacing: .16em; margin: 0 0 20px; }
+.kingfisher-intro-copy h2 { margin: 20px 0 9px; font-size: clamp(1.4rem, 2vw, 1.85rem); }
+.kingfisher-intro-copy p { line-height: 1.7; }
+.kingfisher-cad-panel { background: #030914; border: 1px solid rgba(100,164,233,.38); border-radius: 20px; padding: 12px; margin: 0; text-align: center; }
+.post-view .content .kingfisher-cad-panel img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.kingfisher-cad-panel figcaption { color: #a8bed8; font-size: .88rem; padding: 8px 0 0; }
+.kingfisher-flowchart-panel { margin: 24px 0 0; padding: 16px; border-radius: 18px; background: rgba(8,21,41,.9); border: 1px solid rgba(100,164,233,.28); }
+.kingfisher-flowchart-panel figcaption { font-weight: 750; font-size: clamp(1.15rem, 1.9vw, 1.55rem); text-align: center; margin-bottom: 16px; }
+.post-view .content .kingfisher-flowchart-panel img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.kingfisher-coming-soon { border-top: 1px solid rgba(120,160,210,.24); margin: 36px 0 12px; padding: 22px 0 0; font-size: 1.05rem; font-style: italic; color: #b8c9df; }
+@media(max-width: 780px) { .kingfisher-intro { grid-template-columns: 1fr; } .kingfisher-flowchart-panel { padding: 8px; } }
