@@ -13,7 +13,9 @@ skills:
 main-image: "/cover.png"
 ---
 
-## Introduction
+<div class="project-lede bluf-card"><p>Comparison: dynamics-aware Hybrid A* vs. RRT* with minimum-snap smoothing.</p></div>
+
+## Who cares?
 
 **Quadrotors need paths that are collision-free and physically reasonable to fly.** A geometric path can avoid obstacles but still be too sharp, too close, or too hard to track.
 
@@ -22,7 +24,7 @@ main-image: "/cover.png"
 - **Dynamics by construction:** Hybrid A* with motion primitives.
 - **Dynamics by enforcement:** RRT* followed by minimum-snap smoothing.
 
-## Methods
+## What did we do?
 
 We built three Open3D environments and converted them into **3D occupancy grids**.
 
@@ -46,7 +48,7 @@ Evaluation metrics:
 - **Smoothness**
 - **Average obstacle clearance**
 
-## Results
+## What is the answer?
 
 The comparison showed that **smoother-looking trajectories were not automatically safer**. RRT* + minimum snap was fast and smooth, but it sometimes cut close to obstacles. Hybrid A* kept dynamics inside the search, but needed more tuning and computation.
 
@@ -55,7 +57,7 @@ The comparison showed that **smoother-looking trajectories were not automaticall
   <figure class="figure-card chart"><img src="/assets/images/portfolio/mobrob-Average_Clearance.png" alt="Average obstacle clearance chart"><figcaption>Clearance results showed the risk of smoothing a path after geometric planning.</figcaption></figure>
 </div>
 
-## Discussion
+## Takeaway
 
 This project **worked as a planning comparison**, not as a final flight controller. The useful result was identifying when each pipeline fails: Hybrid A* can become expensive when the primitive set is large, while RRT* + minimum snap can produce a visually smooth trajectory that loses clearance in tight environments.
 

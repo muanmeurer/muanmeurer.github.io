@@ -13,11 +13,13 @@ skills:
 main-image: "/cover.jpg"
 ---
 
-## Introduction
+<div class="project-lede bluf-card"><p>I served as Project Lead for CMU’s inaugural 2025–26 lunar rover team, and it was amazing.</p></div>
+
+## What is it?
 
 **NASA Lunabotics is about real robotics problems:** move regolith, build berms, and operate LiDAR sensing, avionics, and mechanical systems reliably in a dusty, hostile, moon-like environment. And do it better than 49 other teams.
 <br>
-**Objectives:**
+**What I did:**
 
 - Define the architecture for **excavation, storage, deposition, mobility, sensing, and electronics**.
 - Build a lunar-style arena for physical validation.
@@ -26,10 +28,10 @@ main-image: "/cover.jpg"
 
 <div class="figure-row two">
   <figure class="figure-card compact"><img src="/assets/images/portfolio/lunabotics-team.jpg" alt="CMU Moon Miners team photo"><figcaption>MOON MINERS TEAM - 73 students, 3 advisors.</figcaption></figure>
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/lunabotics-presentation-original.jpg" alt="Presenting Lunabotics system overview"><figcaption>Me leading our Preliminary Design Review.</figcaption></figure>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/lunabotics-arena-winter.jpg" alt="Presenting Lunabotics system overview"><figcaption>22′ × 18′ Lunar Simulant Arena (Agricultural Lime)</figcaption></figure>
 </div>
 
-## Methods
+## What did I do?
 
 I was **project lead** across mechanical, avionics, software, and systems.
 
@@ -40,10 +42,10 @@ I was **project lead** across mechanical, avionics, software, and systems.
 
 <div class="figure-row two">
   <figure class="figure-card compact"><img src="/assets/images/portfolio/Lunabotics-CAD_breakdown.png" alt="Lunabotics CAD system breakdown"><figcaption>An overview of the important systems of ATLAS.</figcaption></figure>
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/lunabotics_ebox.jpg" alt="Lunabotics electronics box"><figcaption>Our electronics housing and the brain of the rover.</figcaption></figure>
+  <figure class="figure-card compact"><img src="/assets/images/portfolio/lunabotics-first-year-award.png" alt="Lunabotics electronics box"><figcaption>First-Year Team Presentation Award, 2025–26</figcaption></figure>
 </div>
 
-## Results
+## How did it turn out?
 
 <div class="figure-row two video-pair">
   <figure class="figure-card video-card">
@@ -67,6 +69,6 @@ Reviewer feedback drove concrete changes:
 - Treated mast height and sensor field of view as first-order requirements.
 - Required path planning to account for heading and turning radius.
 
-## Discussion
+## What I learned
 
 The rover **worked well enough to enter physical integration and testing**, which was the important milestone for a first-year team. The unique part of this project was that the team was not only designing a robot; we were also building the review structure, interface discipline, and test infrastructure that made the robot buildable. Excellent year for the team.
