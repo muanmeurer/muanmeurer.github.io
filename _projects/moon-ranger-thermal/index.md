@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /projects/moon-ranger-thermal/
 order: 4
 title: "MoonRanger: Thermal Analysis"
 description: "Keeping a lunar rover from freezing in transit—or baking inside its own garage."

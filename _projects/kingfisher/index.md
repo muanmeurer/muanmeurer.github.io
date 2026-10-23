@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /projects/kingfisher/
 order: 3
 title: "Kingfisher: Aquatic Drone"
 description: "An amphibious drone for inspecting bridges above and below the waterline."

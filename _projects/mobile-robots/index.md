@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /projects/mobile-robots/
 order: 6
 title: "Quadrotor Control: 3D Motion Planning"
 description: "Compared two ways to keep a quadrotor out of cave walls: dynamics-aware Hybrid A* versus RRT* with minimum-snap smoothing."
@@ -13,52 +14,43 @@ skills:
 main-image: "/cover.png"
 ---
 
-<div class="project-lede bluf-card"><p>Comparison: dynamics-aware Hybrid A* vs. RRT* with minimum-snap smoothing.</p></div>
+<div class="story-project quadrotor-story">
+  <div class="story-intro story-planning">
+    <div class="story-intro-copy">
+      <p class="story-eyebrow">MOTION PLANNING · AUTONOMY</p>
+      <h2>A smooth path isn't necessarily a safe one.</h2>
+      <p>A quadrotor can have a beautiful-looking path that it physically cannot fly—or one that threads an obstacle a little too enthusiastically.</p>
+      <p>We compared two approaches to 3D navigation: <strong>Hybrid A*</strong>, which accounts for dynamics during planning, and <strong>RRT* with minimum-snap smoothing</strong>, which finds a geometric path first and smooths it afterward.</p>
+    </div>
+    <figure class="story-feature">
+      <img src="/assets/images/portfolio/mobrob-environments.png" alt="Three increasingly difficult simulated 3D obstacle environments" loading="lazy">
+      <figcaption>Three Open3D test environments, from an open cave to a dense forest and tighter cave.</figcaption>
+    </figure>
+  </div>
 
-## Who cares?
+  <div class="story-cards" aria-label="Motion planning comparison">
+    <div class="story-card"><span>APPROACH 01</span><h3>Hybrid A*</h3><p>Search over dynamics-aware motion primitives, checking collisions at each step.</p></div>
+    <div class="story-card"><span>APPROACH 02</span><h3>RRT* + minimum snap</h3><p>Find waypoints geometrically, then fit a smoother polynomial trajectory.</p></div>
+    <div class="story-card"><span>SAME TEST</span><h3>Three obstacle fields</h3><p>Compare path length, planning time, smoothness, and clearance under the same environments.</p></div>
+  </div>
 
-Quadrotors need paths that are collision-free and physically reasonable to fly. A geometric path can avoid obstacles but still be too sharp, too close, or too hard to track.
+  <section class="story-section">
+    <h2>How did we compare them?</h2>
+    <p>We built three environments in Open3D and converted them into occupancy grids. Hybrid A* expanded candidate arcs and scored each for travel, climb, steering, heading error, clearance, and goal progress. RRT* generated candidate waypoints and minimum-snap polynomials smoothed the trajectory.</p>
+    <div class="story-gallery">
+      <figure><img src="/assets/images/portfolio/mobrob-easypathAstar.png" alt="Hybrid A-star planned path" loading="lazy"><figcaption>Hybrid A*: a dynamically informed route through the easy environment.</figcaption></figure>
+      <figure><img src="/assets/images/portfolio/mobrob-motionprimatives.png" alt="Motion primitive arcs for quadrotor planning" loading="lazy"><figcaption>Motion primitives restrict the search to plausible local movements.</figcaption></figure>
+    </div>
+  </section>
 
-**Objective:** compare two planning philosophies.
-
-- **Dynamics by construction:** Hybrid A* with motion primitives.
-- **Dynamics by enforcement:** RRT* followed by minimum-snap smoothing.
-
-## What did we do?
-
-We built three Open3D environments and converted them into 3D occupancy grids.
-
-<div class="figure-row single">
-  <figure class="figure-card wide"><img src="/assets/images/portfolio/mobrob-environments.png" alt="Easy medium and hard obstacle environments"><figcaption>Obstacle complexity increased from an open cave to a dense forest and then a complicated cave.</figcaption></figure>
+  <section class="story-section">
+    <h2>Which approach won?</h2>
+    <p>Neither, universally. RRT* with smoothing was fast and produced clean trajectories, but could shave away obstacle clearance. Hybrid A* respected its motion model as it searched, at the cost of additional tuning and computation.</p>
+    <div class="story-gallery">
+      <figure><img src="/assets/images/portfolio/mobrob-TimevsPathLength.png" alt="Planning time versus path length" loading="lazy"><figcaption>Faster planning and shorter routes didn't always arrive together.</figcaption></figure>
+      <figure><img src="/assets/images/portfolio/mobrob-Average_Clearance.png" alt="Average obstacle clearance comparison" loading="lazy"><figcaption>Smoothing after planning can compromise clearance.</figcaption></figure>
+    </div>
+    <div class="story-conclusion"><p>This was a planning comparison, not a flight-ready controller. The important distinction was <em>plan with the dynamics built in</em> versus <em>plan first, smooth later</em>, evaluated with the same environments and metrics.</p></div>
+    <p class="story-endnote">Next up: close the loop with a tracking controller and see whether that simulated smoothness makes for better actual flight.</p>
+  </section>
 </div>
-
-The Hybrid A* planner generated forward arcs, collision-checked them, and scored the remaining options using travel, climb, steering, heading error, clearance, and progress terms.
-
-<div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/mobrob-easypathAstar.png" alt="Hybrid A star easy environment path"><figcaption>Hybrid A* generated a dynamics-aware path through the easy cave.</figcaption></figure>
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/mobrob-motionprimatives.png" alt="Motion primitive candidates"><figcaption>Motion primitives show the local feasible arcs evaluated from each state.</figcaption></figure>
-</div>
-
-The RRT* + minimum snap planner first generated waypoints, then fit a polynomial trajectory to reduce snap and improve smoothness.
-
-Evaluation metrics:
-
-- **Path length**
-- **Simulation time**
-- **Smoothness**
-- **Average obstacle clearance**
-
-## What is the answer?
-
-The comparison showed that smoother-looking trajectories were not automatically safer. RRT* + minimum snap was fast and smooth, but it sometimes cut close to obstacles. Hybrid A* kept dynamics inside the search, but needed more tuning and computation.
-
-<div class="figure-row two chart-pair tight-charts">
-  <figure class="figure-card chart"><img src="/assets/images/portfolio/mobrob-TimevsPathLength.png" alt="Time versus path length chart"><figcaption>Time versus path length showed that shorter paths were not always faster to generate.</figcaption></figure>
-  <figure class="figure-card chart"><img src="/assets/images/portfolio/mobrob-Average_Clearance.png" alt="Average obstacle clearance chart"><figcaption>Clearance results showed the risk of smoothing a path after geometric planning.</figcaption></figure>
-</div>
-
-## Takeaway
-
-This project worked as a planning comparison, not as a final flight controller. The useful result was identifying when each pipeline fails: Hybrid A* can become expensive when the primitive set is large, while RRT* + minimum snap can produce a visually smooth trajectory that loses clearance in tight environments.
-
-The unique part was comparing plan-with-dynamics-built-in against plan-first, smooth-later using the same environments and metrics. For real quadrotor navigation, the next step would be connecting the planner to tracking control and testing whether the simulated smoothness actually improves closed-loop flight behavior.

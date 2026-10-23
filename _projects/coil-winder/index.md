@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /projects/coil-winder/
 order: 5
 title: "CoilBoy: Programmable Coil Winder"
 description: "Mechanical Engineer - Designed and built a programmable coil winder for Westinghouse."
@@ -11,48 +12,43 @@ skills:
 main-image: "/cover.jpg"
 ---
 
-<div class="project-lede bluf-card"><p>I was a mechanical engineer who designed and built a <em>special</em> coil winder for Westinghouse.</p></div>
+<div class="story-project coilboy-story">
+  <div class="story-intro">
+    <div class="story-intro-copy">
+      <p class="story-eyebrow">WESTINGHOUSE · MECHATRONIC DESIGN</p>
+      <h2>Coils are simple. Repeating them isn’t.</h2>
+      <p>Westinghouse needed to prototype LVDT sensor coils for its eVinci program. Hand winding was flexible, but wire pitch, tension, and repeatability changed with the operator—and so did the inductance.</p>
+      <p>We designed <strong>CoilBoy</strong>: a semi-automated winder that changes mandrel diameter, wire gauge, turn count, and pitch without redesigning the entire machine every time.</p>
+    </div>
+    <figure class="story-feature">
+      <img src="/assets/images/portfolio/coilboy-winding-closeup.jpg" alt="CoilBoy mechanical assembly and winding mechanism" loading="lazy">
+      <figcaption>The winding head, where tension and wire placement have to cooperate.</figcaption>
+    </figure>
+  </div>
+  <div class="story-stats" aria-label="CoilBoy project results">
+    <div><span>CLIENT</span><strong>Westinghouse</strong><small>eVinci sensor development</small></div>
+    <div><span>REPEATABILITY TARGET</span><strong>±3%</strong><small>Inductance about each configuration's mean</small></div>
+    <div><span>BEST SINGLE-LAYER CASE</span><strong>1.07%</strong><small>Average difference, 25 mm / 20 turns</small></div>
+  </div>
 
-## What is it?
+  <section class="story-section">
+    <h2>How does it work?</h2>
+    <p>Think of a very small, opinionated lathe. The spindle turns the mandrel while a nozzle traverses along its length. Coordinating those two axes gives us control of wire placement and pitch.</p>
+    <div class="story-cards">
+      <div class="story-card"><span>ROTATION</span><h3>NEMA 23 spindle</h3><p>Rotates the interchangeable mandrel at the commanded winding speed.</p></div>
+      <div class="story-card"><span>TRAVERSE</span><h3>NEMA 17 + ball screw</h3><p>Moves the wire guide along the axis so pitch follows spindle rotation.</p></div>
+      <div class="story-card"><span>REPEATABILITY</span><h3>Guidance + tension</h3><p>Clamps, interchangeable stock, and a passive tensioner help keep each run consistent.</p></div>
+    </div>
+    <p>My job was the mechanical design and integration, plus getting the synchronized motion to behave across different coil geometries. Designing the mechanism was one thing; making the wire agree with the plan was another.</p>
+    <figure class="story-feature story-requirements"><img src="/assets/images/portfolio/coil-criteria.png" alt="Westinghouse coil geometry and process requirements" loading="lazy"><figcaption>Westinghouse's requirements — the design space CoilBoy needed to accommodate.</figcaption></figure>
+    <div class="figure-row single coilboy-large-diagram"><figure class="figure-card wide"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="CoilBoy mechanism concept sketches" loading="lazy"><figcaption>Design concepts before the final machine architecture emerged.</figcaption></figure></div>
+  </section>
 
-Westinghouse needed a faster way to prototype coils for eVinci LVDT sensor development. Hand winding was flexible, but pitch, tension, diameter, and repeatability depended too heavily on the operator.
-<br>
-So: we built a semi-automated winder that could efficiently change diameter, pitch, turn count, and wire gauge without rebuilding the machine around every coil.
-
-## How does it work? What did I do?
-
-I designed and integrated a lathe-style winding architecture that coupled spindle rotation to the nozzle’s linear travel.
-
-- **NEMA 23 spindle:** rotated an interchangeable mandrel and set winding speed.
-- **NEMA 17 X-axis:** translated the wire nozzle along a ball screw to control pitch.
-- **Synchronized motion:** converted commanded turns and pitch into coordinated rotary and linear motion.
-- **Lead clamp and removable stock:** anchored the wire and let finished coils come off without a wrestling match.
-- **Passive tensioner and nozzle:** guided wire across different diameters and gauges while limiting slack.
-
-<div class="figure-row single coilboy-large-diagram coilboy-requirements">
-  <figure class="figure-card wide"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Westinghouse’s Requirements</figcaption></figure>
-</div>
-<div class="figure-row single coilboy-large-diagram">
-  <figure class="figure-card wide"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Prototyping Concept Generation</figcaption></figure>
-</div>
-
-## How did it perform?
-
-<div class="video-center coil-results-video">
-  <figure class="figure-card video-card">
-    <video class="project-video card-video" controls muted playsinline preload="metadata" poster="/assets/images/portfolio/coilboy-results-poster.jpg">
-      <source src="/assets/videos/coilboy-multilayer-winding.mp4" type="video/mp4">
-    </video>
-    <figcaption>CoilBoy winding a finished coil during final demonstration.</figcaption>
-  </figure>
-</div>
-
-The final test campaign covered five single-layer and two multi-layer configurations. Westinghouse defined success as repeated coils within ±3% of each configuration’s average inductance.
-
-
-
-
-<div class="data-table-wrap" role="region" aria-label="CoilBoy inductance repeatability data" tabindex="0">
+  <section class="story-section story-data">
+    <h2>Did it actually wind repeatably?</h2>
+    <p>We tested five single-layer and two multi-layer configurations. Westinghouse defined success as coils remaining within <strong>±3% of the configuration's average inductance</strong>.</p>
+    <div class="video-center coil-results-video"><figure class="figure-card video-card"><video class="project-video card-video" controls muted playsinline preload="metadata" poster="/assets/images/portfolio/coilboy-results-poster.jpg"><source src="/assets/videos/coilboy-multilayer-winding.mp4" type="video/mp4"></video><figcaption>CoilBoy winding a finished coil during the final demonstration.</figcaption></figure></div>
+    <div class="data-table-wrap" role="region" aria-label="CoilBoy inductance repeatability data" tabindex="0">
 <table class="data-table">
   <thead>
     <tr>
@@ -75,15 +71,16 @@ The final test campaign covered five single-layer and two multi-layer configurat
   </tbody>
 </table>
 </div>
+    <p>Most AWG32 single-layer trials and both multi-layer configurations met the ±3% target; the 6 mm, 40-turn case had one outlying run. The 25 mm, 20-turn AWG32 coil averaged <strong>1.07% difference</strong>; the AWG24 case was the clear outlier at 5.41%.</p>
+    <p>That pointed to the mechanical issues—wire stiffness, nozzle resistance, tension, and placement—rather than a fundamental motor-control problem. Wheeler's formula also tracked measured inductance better than the long-coil approximation.</p>
+    <div class="story-conclusion"><p>The next useful iteration is to refine tension control and nozzle alignment, calibrate pitch for wire gauge and mandrel diameter, and retest the difficult cases.</p></div>
+  </section>
 
-
-
-CoilBoy met Westinghouse’s ±3% repeatability target for the AWG32 single-layer coils and both multi-layer configurations. <br>
-
-The best result was the 25 mm, 20-turn AWG32 coil at 1.07% average difference; the AWG24 case was the outlier at 5.41%, pointing to wire stiffness, nozzle resistance, tension, and placement—not motor control—as the main limits.
-
-Wheeler’s formula tracked the measured coils better than the long-coil approximation, while the successful multi-layer runs showed that much higher inductance did not require giving up repeatability. The next useful iteration is mostly mechanical: improve tension control and nozzle alignment, calibrate pitch by wire gauge and mandrel diameter, then retest AWG24 and the 6 mm configurations.
-
-<div class="figure-row single coilboy-award-photo">
-  <figure class="figure-card wide"><img src="/assets/images/portfolio/coilboy-best-prototype.jpg" alt="CoilBoy team holding Best Prototype awards at the Carnegie Mellon Spring Design Expo"><figcaption>CoilBoy received the Best Prototype award at Carnegie Mellon’s 2026 Spring Design Expo—a pleasant confirmation that the machine worked outside our own test spreadsheet.</figcaption></figure>
+  <section class="story-section">
+    <h2>One nice bonus.</h2>
+    <div class="story-split reverse">
+      <figure class="story-picture story-award"><img src="/assets/images/portfolio/coilboy-best-prototype.jpg" alt="CoilBoy team receiving the Best Prototype award" loading="lazy"><figcaption>Best Prototype, CMU Spring Design Expo 2026.</figcaption></figure>
+      <div><p>CoilBoy won <strong>Best Prototype</strong> at CMU's 2026 Spring Design Expo. Always nice when your test data and the people standing in front of the machine agree that it works.</p></div>
+    </div>
+  </section>
 </div>

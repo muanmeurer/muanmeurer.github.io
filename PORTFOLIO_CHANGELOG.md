@@ -77,3 +77,13 @@
 - Rewrote MoonRanger Thermal in the shorter, personable Kingfisher narrative pattern: the design question, finite-difference Thermal Desktop approach, real duty-cycle results, and operational takeaway. Retained all original technical images and both videos.
 - Corrected invalid footer HTML. Project order and all previous edits remain unchanged.
 - Built a local browser preview of the resulting HTML/CSS and checked desktop, laptop and mobile layouts for horizontal overflow. This is a browser preview, not a full Jekyll deployment build.
+
+
+## Editorial consistency and link repair (October 23, 2026)
+
+- About Me paragraphs, section label, and emphasized text now render white.
+- Homepage SKILLS label substantially larger/heavier; all three category headings and tag groups centered at desktop and mobile breakpoints.
+- Added explicit `/projects/<slug>/` permalinks to every project, ensuring homepage skill tags point at stable Jekyll routes even when the source file is `index.md`.
+- Redesigned Lunabotics, MoonRanger mechanical/EMI, CoilBoy, and Quadrotor project pages to share Kingfisher/Thermal's editorial split, concise kickers, responsive captions, and technical visual hierarchy.
+- Preserved Kingfisher's original functional-decomposition chart and the existing project assets.
+- Retained CoilBoy's full test table, MoonRanger verification specifics, Lunabotics team results, and the quadrotor comparative findings.
