@@ -1231,3 +1231,43 @@ button { font: inherit; }
 .post-view .content .kingfisher-flowchart-panel img { display: block; width: 100%; height: auto; border-radius: 10px; }
 .kingfisher-coming-soon { border-top: 1px solid rgba(120,160,210,.24); margin: 36px 0 12px; padding: 22px 0 0; font-size: 1.05rem; font-style: italic; color: #b8c9df; }
 @media(max-width: 780px) { .kingfisher-intro { grid-template-columns: 1fr; } .kingfisher-flowchart-panel { padding: 8px; } }
+
+
+/* Editorial refresh, October 23 — intentional sizing and typographic hierarchy */
+.hero-section { width:min(100% - 64px, 1460px); grid-template-columns:minmax(0, 1.17fr) minmax(0, .83fr); gap:clamp(32px,3.5vw,64px); min-height:0; padding:48px 0 60px; align-items:center; }
+.hero-visual { max-width:660px; justify-self:end; }
+.rover-hero-card video { aspect-ratio:16/10 !important; object-fit:contain !important; max-height:490px; background:#050b16; }
+.hero-media-shell { padding:7px; border-radius:23px; }
+.rover-hero-card video { border-radius:17px; }
+.hero-skills-block { margin:24px 0 22px; }
+.hero-skills { max-width:none; gap:clamp(10px,1.1vw,18px); }
+.hero-skill-column { align-items:stretch; }
+.hero-skill-column h2 { font-size:clamp(15px,1.05vw,18px); color:#e8f2ff; }
+.hero-skill-column .skill-bubble { width:100%; min-width:0; min-height:38px; padding:9px 8px; font-size:clamp(12px,.85vw,14px); font-weight:650; border-radius:12px; }
+.hero-skills-side-label { font-size:13px; }
+.about-section { grid-template-columns:264px minmax(0,1fr); gap:38px; }
+.about-section .about-image { width:264px; aspect-ratio:4/5; }
+.about-section .about-image img { width:100% !important; height:100% !important; }
+.about-copy h2 { color:#f8fbff; }
+.post-view .content { font-size:17px; line-height:1.78; }
+.post-view .content > h2 { color:#9ed0ff; border-top:1px solid rgba(96,165,250,.28); margin-top:44px; padding-top:23px; letter-spacing:-.025em; }
+.post-view .content > h2:first-of-type { border-top:0; margin-top:14px; padding-top:0; }
+.post-view .content > p { max-width:76ch; }
+.post-view .content li { margin-bottom:10px; }
+.post-view .content strong { color:#f1f7ff; }
+.post-view .content .figure-row { gap:22px; margin-top:26px; margin-bottom:34px; }
+.post-view .content .figure-card { background:rgba(11,23,43,.72); border:1px solid rgba(117,155,204,.25); border-radius:17px; }
+.post-view .content .figure-card img { max-height:420px !important; object-fit:contain !important; }
+.post-view .content .figure-card figcaption { color:#a7c4e3 !important; font-size:14px !important; font-weight:600; line-height:1.45; }
+.post-view .content .figure-row.two .figure-card { width:100%; max-width:100%; }
+.post-view .content .figure-row.two .figure-card img { width:100% !important; height:300px !important; object-fit:contain !important; }
+.post-view .content .coilboy-requirements { max-width:686px !important; margin-left:auto; margin-right:auto; }
+.post-view .content .coilboy-requirements .figure-card { width:100%; }
+.post-view .content .coilboy-requirements .figure-card img { width:100% !important; max-height:440px !important; }
+.post-view .content .coilboy-large-diagram:not(.coilboy-requirements) .figure-card img { max-height:620px !important; }
+.post-view .content .coilboy-award-photo .figure-card img { height:auto !important; max-height:340px !important; width:auto !important; }
+.post-view .content .lunabotics-lede p { font-size:clamp(19px,2vw,25px) !important; line-height:1.48 !important; color:#e7f2ff; }
+.post-view .summary .skills-card .skill { font-size:14px; padding:7px 12px; }
+@media(max-width:1100px){ .hero-section { grid-template-columns:1fr; width:min(100% - 44px, 900px); } .hero-visual { justify-self:center; width:min(100%,720px); } .rover-hero-card video { max-height:420px; } }
+@media(max-width:850px){ .about-section { grid-template-columns:1fr; } .about-section .about-image { width:min(264px,75vw); } .post-view .content .figure-row.two .figure-card img { height:auto !important; max-height:360px !important; } }
+@media(max-width:620px){ .hero-section { width:min(100% - 30px,900px); } .hero-skills-block { grid-template-columns:20px minmax(0,1fr); gap:7px; } .hero-skills { gap:6px; } .hero-skill-column .skill-bubble { font-size:11px; padding:8px 3px; min-height:38px; } .hero-skill-column h2 { font-size:12px; } .hero-actions { margin-top:22px; } .post-view .content { font-size:16px; } }

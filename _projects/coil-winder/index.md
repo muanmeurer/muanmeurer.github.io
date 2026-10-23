@@ -29,7 +29,7 @@ I designed and integrated a lathe-style winding architecture that coupled spindl
 - **Lead clamp and removable stock:** anchored the wire and let finished coils come off without a wrestling match.
 - **Passive tensioner and nozzle:** guided wire across different diameters and gauges while limiting slack.
 
-<div class="figure-row single coilboy-large-diagram">
+<div class="figure-row single coilboy-large-diagram coilboy-requirements">
   <figure class="figure-card wide"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Westinghouse’s Requirements</figcaption></figure>
 </div>
 <div class="figure-row single coilboy-large-diagram">

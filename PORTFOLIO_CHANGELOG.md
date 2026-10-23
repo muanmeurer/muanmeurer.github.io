@@ -60,3 +60,11 @@
 - Featured Work order: Lunabotics, MoonRanger CAD/FEA/EMI, Kingfisher, MoonRanger Thermal, CoilBoy, Quadrotor.
 - Clarified Kingfisher is for sensor-based bridge inspection; piston ballast adjusts buoyancy and does not collect samples.
 - Restored the exact user-supplied functional-decomposition PNG without edits.
+
+## October 23 editorial refresh
+- Removed stray `x\`` before contact section.
+- Reduced homepage rover video footprint and enlarged skill labels and links.
+- Changed About title to “Making Machines Move” and increased portrait size 20%.
+- Changed Featured Work title to “Rovers, Robots, Machines, and Doodads.”
+- Restored detailed Lunabotics narrative and retained original project media.
+- Reduced Westinghouse requirements image width about 30%; normalized project image frames and refined heading/paragraph contrast.
