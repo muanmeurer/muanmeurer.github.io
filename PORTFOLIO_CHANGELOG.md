@@ -87,3 +87,10 @@
 - Redesigned Lunabotics, MoonRanger mechanical/EMI, CoilBoy, and Quadrotor project pages to share Kingfisher/Thermal's editorial split, concise kickers, responsive captions, and technical visual hierarchy.
 - Preserved Kingfisher's original functional-decomposition chart and the existing project assets.
 - Retained CoilBoy's full test table, MoonRanger verification specifics, Lunabotics team results, and the quadrotor comparative findings.
+
+## 2026-10-23 — Editorial project re-layout
+
+- Converted Lunabotics, MoonRanger mechanical, CoilBoy, and Quadrotor Control into alternating text-plus-medium-image sections, matching the Kingfisher/Thermal design language.
+- Restricted supporting media to compact side asides, with smaller stacked technical figures and captions; retained all images/videos and CoilBoy test data.
+- Kept original substantive narrative and numbers, making only minor heading/transition edits.
+- Left the approved homepage, Kingfisher, and Thermal Analysis layouts untouched.
