@@ -94,3 +94,11 @@
 - Restricted supporting media to compact side asides, with smaller stacked technical figures and captions; retained all images/videos and CoilBoy test data.
 - Kept original substantive narrative and numbers, making only minor heading/transition edits.
 - Left the approved homepage, Kingfisher, and Thermal Analysis layouts untouched.
+
+## 2026-10-23 — Original voice and figure readability
+
+- Restored the original engineering narrative across Lunabotics, MoonRanger mechanical, CoilBoy and Quadrotor Planning instead of the over-stylized editorial rewrites.
+- Removed throwaway phrases (including “You know, the usual.”) and simplified headings while preserving the dark blue/red visual system.
+- Resized image groups based on their purpose: major FEA results and the two quadrotor comparison graphs now have dedicated side-by-side rows; supporting images remain beside the copy.
+- Left the homepage, Kingfisher, and MoonRanger Thermal pages unchanged.
+- Verified the six project routes, referenced project media, desktop/mobile layout, and the ZIP archives.
