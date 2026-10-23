@@ -11,13 +11,15 @@ skills:
 main-image: "/cover.jpg"
 ---
 
-## Introduction
+<div class="project-lede bluf-card"><p>I was a mechanical engineer who designed and built a <em>special</em> coil winder for Westinghouse.</p></div>
+
+## What is it?
 
 **Westinghouse needed a faster way to prototype coils for eVinci LVDT sensor development.** Hand winding was flexible, but pitch, tension, diameter, and repeatability depended too heavily on the operator.
 <br>
 **So:** we built a semi-automated winder that could efficiently change diameter, pitch, turn count, and wire gauge without rebuilding the machine around every coil.
 
-## Methods
+## How does it work? What did I do?
 
 I designed and integrated a **lathe-style winding architecture** that coupled spindle rotation to the nozzle’s linear travel.
 
@@ -27,12 +29,14 @@ I designed and integrated a **lathe-style winding architecture** that coupled sp
 - **Lead clamp and removable stock:** anchored the wire and let finished coils come off without a wrestling match.
 - **Passive tensioner and nozzle:** guided wire across different diameters and gauges while limiting slack.
 
-<div class="figure-row two">
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Customer needs were translated into measurable geometry, pitch, turn-count, and wire-gauge targets.</figcaption></figure>
-  <figure class="figure-card compact"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Concept selection favored flexible geometry and quick changeover over fixed-geometry production speed.</figcaption></figure>
+<div class="figure-row single coilboy-large-diagram">
+  <figure class="figure-card wide"><img src="/assets/images/portfolio/coil-criteria.png" alt="Coil winder customer needs and parameter range"><figcaption>Westinghouse’s Requirements</figcaption></figure>
+</div>
+<div class="figure-row single coilboy-large-diagram">
+  <figure class="figure-card wide"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winding concept sketches"><figcaption>Prototyping Concept Generation</figcaption></figure>
 </div>
 
-## Results
+## How did it perform?
 
 <div class="video-center coil-results-video">
   <figure class="figure-card video-card">
@@ -45,17 +49,12 @@ I designed and integrated a **lathe-style winding architecture** that coupled sp
 
 The final test campaign covered **five single-layer and two multi-layer configurations**. Westinghouse defined success as repeated coils within **±3% of each configuration’s average inductance**.
 
-<div class="metric-grid">
-  <div class="metric-card"><strong>6 / 7</strong><span>configurations met the average ±3% target</span></div>
-  <div class="metric-card"><strong>1.07%</strong><span>best single-layer average difference</span></div>
+
   <div class="metric-card"><strong>100%</strong><span>pass rate for both multi-layer configurations</span></div>
   <div class="metric-card"><strong>5.41%</strong><span>AWG24 average difference—the clear outlier</span></div>
 </div>
 
-<div class="figure-row two chart-pair coil-precision-charts">
-  <figure class="figure-card chart"><img src="/assets/images/portfolio/coilboy-single-layer-precision.png" alt="Average inductance difference for single-layer CoilBoy tests"><figcaption>Four of five single-layer configurations averaged below the 3% target. AWG24 was the exception.</figcaption></figure>
-  <figure class="figure-card chart"><img src="/assets/images/portfolio/coilboy-multilayer-precision.png" alt="Average inductance difference for multi-layer CoilBoy tests"><figcaption>Both multi-layer configurations stayed below 3% average difference and passed every repeated run.</figcaption></figure>
-</div>
+
 
 <div class="data-table-wrap" role="region" aria-label="CoilBoy inductance repeatability data" tabindex="0">
 <table class="data-table">
@@ -81,7 +80,7 @@ The final test campaign covered **five single-layer and two multi-layer configur
 </table>
 </div>
 
-## Discussion
+
 
 CoilBoy met Westinghouse’s **±3% repeatability target** for the AWG32 single-layer coils and both multi-layer configurations. <br>
 
