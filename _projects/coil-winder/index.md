@@ -1,6 +1,6 @@
 ---
 layout: post
-order: 2
+order: 5
 title: "CoilBoy: Programmable Coil Winder"
 description: "Mechanical Engineer - Designed and built a programmable coil winder for Westinghouse."
 skills:
@@ -15,13 +15,13 @@ main-image: "/cover.jpg"
 
 ## What is it?
 
-**Westinghouse needed a faster way to prototype coils for eVinci LVDT sensor development.** Hand winding was flexible, but pitch, tension, diameter, and repeatability depended too heavily on the operator.
+Westinghouse needed a faster way to prototype coils for eVinci LVDT sensor development. Hand winding was flexible, but pitch, tension, diameter, and repeatability depended too heavily on the operator.
 <br>
-**So:** we built a semi-automated winder that could efficiently change diameter, pitch, turn count, and wire gauge without rebuilding the machine around every coil.
+So: we built a semi-automated winder that could efficiently change diameter, pitch, turn count, and wire gauge without rebuilding the machine around every coil.
 
 ## How does it work? What did I do?
 
-I designed and integrated a **lathe-style winding architecture** that coupled spindle rotation to the nozzle’s linear travel.
+I designed and integrated a lathe-style winding architecture that coupled spindle rotation to the nozzle’s linear travel.
 
 - **NEMA 23 spindle:** rotated an interchangeable mandrel and set winding speed.
 - **NEMA 17 X-axis:** translated the wire nozzle along a ball screw to control pitch.
@@ -47,12 +47,8 @@ I designed and integrated a **lathe-style winding architecture** that coupled sp
   </figure>
 </div>
 
-The final test campaign covered **five single-layer and two multi-layer configurations**. Westinghouse defined success as repeated coils within **±3% of each configuration’s average inductance**.
+The final test campaign covered five single-layer and two multi-layer configurations. Westinghouse defined success as repeated coils within ±3% of each configuration’s average inductance.
 
-
-  <div class="metric-card"><strong>100%</strong><span>pass rate for both multi-layer configurations</span></div>
-  <div class="metric-card"><strong>5.41%</strong><span>AWG24 average difference—the clear outlier</span></div>
-</div>
 
 
 
@@ -82,9 +78,9 @@ The final test campaign covered **five single-layer and two multi-layer configur
 
 
 
-CoilBoy met Westinghouse’s **±3% repeatability target** for the AWG32 single-layer coils and both multi-layer configurations. <br>
+CoilBoy met Westinghouse’s ±3% repeatability target for the AWG32 single-layer coils and both multi-layer configurations. <br>
 
-The best result was the 25 mm, 20-turn AWG32 coil at **1.07% average difference**; the AWG24 case was the outlier at **5.41%**, pointing to wire stiffness, nozzle resistance, tension, and placement—not motor control—as the main limits.
+The best result was the 25 mm, 20-turn AWG32 coil at 1.07% average difference; the AWG24 case was the outlier at 5.41%, pointing to wire stiffness, nozzle resistance, tension, and placement—not motor control—as the main limits.
 
 Wheeler’s formula tracked the measured coils better than the long-coil approximation, while the successful multi-layer runs showed that much higher inductance did not require giving up repeatability. The next useful iteration is mostly mechanical: improve tension control and nozzle alignment, calibrate pitch by wire gauge and mandrel diameter, then retest AWG24 and the 6 mm configurations.
 

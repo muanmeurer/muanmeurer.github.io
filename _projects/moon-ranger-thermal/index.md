@@ -15,18 +15,18 @@ main-image: "/cover.png"
 
 ## Introduction
 
-**MoonRanger has to survive cislunar transit, landing, and lunar surface operations without exceeding tight avionics and battery limits.** The newer mission concept places the rover inside a semi-enclosed thermal garage during transit, which changes the problem from direct radiation to deep space into a buffered enclosure with internal radiation and limited conductive leakage.
+MoonRanger has to survive cislunar transit, landing, and lunar surface operations without exceeding tight avionics and battery limits. The newer mission concept places the rover inside a semi-enclosed thermal garage during transit, which changes the problem from direct radiation to deep space into a buffered enclosure with internal radiation and limited conductive leakage.
 
 **Objective:** determine whether the garage protects the rover or traps enough heat to become a risk.
 
 ## Methods
 
-I built a **finite-difference Thermal Desktop model** of the rover-in-garage transit configuration.
+I built a finite-difference Thermal Desktop model of the rover-in-garage transit configuration.
 
-- Modeled a simplified **1 m × 1 m × 0.5 m** garage enclosure.
+- Modeled a simplified 1 m × 1 m × 0.5 m garage enclosure.
 - Applied deep-space radiation, solar loading, and lander/HDRM conductive paths.
 - Compared powered checkout, charging, and combined duty-cycle cases.
-- Tracked whether avionics stayed within a conservative **-30 °C to 60 °C** allowable range.
+- Tracked whether avionics stayed within a conservative -30 °C to 60 °C allowable range.
 
 <div class="figure-row two thermal-video-pair">
   <figure class="figure-card video-card">
@@ -50,7 +50,7 @@ I built a **finite-difference Thermal Desktop model** of the rover-in-garage tra
 
 ## Results
 
-The garage **did not cause runaway heating when operations were spaced realistically**. It moderated temperature swings and allowed periodic powered activities, but it became unsafe under compressed charging schedules.
+The garage did not cause runaway heating when operations were spaced realistically. It moderated temperature swings and allowed periodic powered activities, but it became unsafe under compressed charging schedules.
 
 <div class="figure-row two">
   <figure class="figure-card compact"><img src="/assets/images/portfolio/moonranger-avionics_allowable_heats.png" alt="MoonRanger avionics allowable heat table"><figcaption>Allowable temperatures turned model output into direct pass/fail engineering constraints.</figcaption></figure>
@@ -66,6 +66,6 @@ Key findings:
 
 ## Discussion
 
-The analysis **worked because it answered the design question with an operational rule**, not just a temperature plot. The garage is not required as a cold-survival device, but it is valuable because it reduces oscillations, lowers heater dependence, and makes powered transit check-ins easier to schedule safely.
+The analysis worked because it answered the design question with an operational rule, not just a temperature plot. The garage is not required as a cold-survival device, but it is valuable because it reduces oscillations, lowers heater dependence, and makes powered transit check-ins easier to schedule safely.
 
-The unique part was showing that the same enclosure can be **good or bad depending on cadence**. If charging is compressed, the garage traps heat and becomes dangerous. If charging is spaced realistically, the garage becomes a thermal buffer and stays well below the conservative avionics limit. The next step is replacing the simplified box with flight-like garage geometry, Firefly trajectory inputs, real conductive paths, and TVAC validation.
+The unique part was showing that the same enclosure can be good or bad depending on cadence. If charging is compressed, the garage traps heat and becomes dangerous. If charging is spaced realistically, the garage becomes a thermal buffer and stays well below the conservative avionics limit. The next step is replacing the simplified box with flight-like garage geometry, Firefly trajectory inputs, real conductive paths, and TVAC validation.

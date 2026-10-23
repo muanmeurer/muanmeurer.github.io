@@ -17,11 +17,11 @@ main-image: "/cover.jpg"
 
 ## What is it?
 
-**NASA Lunabotics is about real robotics problems:** move regolith, build berms, and operate LiDAR sensing, avionics, and mechanical systems reliably in a dusty, hostile, moon-like environment. And do it better than 49 other teams.
+NASA Lunabotics is about real robotics problems: move regolith, build berms, and operate LiDAR sensing, avionics, and mechanical systems reliably in a dusty, hostile, moon-like environment. And do it better than 49 other teams.
 <br>
-**What I did:**
+What I did:
 
-- Define the architecture for **excavation, storage, deposition, mobility, sensing, and electronics**.
+- Define the architecture for excavation, storage, deposition, mobility, sensing, and electronics.
 - Build a lunar-style arena for physical validation.
 - Keep mechanical, avionics, software, and systems work aligned.
 - Give presentations reviewing progress to NASA, corporate sponsors, and engineers from industry.
@@ -33,7 +33,7 @@ main-image: "/cover.jpg"
 
 ## What did I do?
 
-I was **project lead** across mechanical, avionics, software, and systems.
+I was project lead across mechanical, avionics, software, and systems.
 
 - Turned competition rules and advisor feedback into*system requirements.
 - Used SRR, PDR, and CDR as hard design gates.
@@ -64,11 +64,11 @@ I was **project lead** across mechanical, avionics, software, and systems.
 
 Reviewer feedback drove concrete changes:
 
-- Simplified the **E-stop path** to reduce electrical risk.
+- Simplified the E-stop path to reduce electrical risk.
 - Separated sensitive compute and actuator power concerns.
 - Treated mast height and sensor field of view as first-order requirements.
 - Required path planning to account for heading and turning radius.
 
 ## What I learned
 
-The rover **worked well enough to enter physical integration and testing**, which was the important milestone for a first-year team. The unique part of this project was that the team was not only designing a robot; we were also building the review structure, interface discipline, and test infrastructure that made the robot buildable. Excellent year for the team.
+The rover worked well enough to enter physical integration and testing, which was the important milestone for a first-year team. The unique part of this project was that the team was not only designing a robot; we were also building the review structure, interface discipline, and test infrastructure that made the robot buildable. Excellent year for the team.
