@@ -30,22 +30,20 @@ main-image: "/cover.jpg"
     <div><span>BEST SINGLE-LAYER CASE</span><strong>1.07%</strong><small>Average difference, 25 mm / 20 turns</small></div>
   </div>
   <section class="story-section">
-    <div class="editorial-row editorial-row--reverse editorial-row--feature">
-      <div class="editorial-copy">
-        <p class="story-eyebrow">DESIGN &amp; MOTION CONTROL</p>
-        <h2>How does it work? What did I do?</h2>
-        <p>I designed and integrated a lathe-style winding architecture that coupled spindle rotation to the nozzle’s linear travel.</p>
-        <ul>
-          <li><strong>NEMA 23 spindle:</strong> rotated an interchangeable mandrel and set winding speed.</li>
-          <li><strong>NEMA 17 X-axis:</strong> translated the wire nozzle along a ball screw to control pitch.</li>
-          <li><strong>Synchronized motion:</strong> converted commanded turns and pitch into coordinated rotary and linear motion.</li>
-          <li><strong>Lead clamp and removable stock:</strong> anchored the wire and let finished coils come off without a wrestling match.</li>
-          <li><strong>Passive tensioner and nozzle:</strong> guided wire across different diameters and gauges while limiting slack.</li>
-        </ul>
-      </div>
-      <figure class="editorial-figure"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winder concept designs" loading="lazy"><figcaption>Prototyping concept generation.</figcaption></figure>
+    <div class="editorial-copy editorial-copy--wide">
+      <p class="story-eyebrow">DESIGN &amp; MOTION CONTROL</p>
+      <h2>How does it work? What did I do?</h2>
+      <p>I designed and integrated a lathe-style winding architecture that coupled spindle rotation to the nozzle’s linear travel.</p>
+      <ul>
+        <li><strong>NEMA 23 spindle:</strong> rotated an interchangeable mandrel and set winding speed.</li>
+        <li><strong>NEMA 17 X-axis:</strong> translated the wire nozzle along a ball screw to control pitch.</li>
+        <li><strong>Synchronized motion:</strong> converted commanded turns and pitch into coordinated rotary and linear motion.</li>
+        <li><strong>Lead clamp and removable stock:</strong> anchored the wire and let finished coils come off without a wrestling match.</li>
+        <li><strong>Passive tensioner and nozzle:</strong> guided wire across different diameters and gauges while limiting slack.</li>
+      </ul>
     </div>
-    <figure class="editorial-figure editorial-figure--diagram editorial-figure--requirements"><img src="/assets/images/portfolio/coil-criteria.png" alt="Westinghouse coil parameter requirements" loading="lazy"><figcaption>Westinghouse’s requirements.</figcaption></figure>
+    <figure class="editorial-figure editorial-figure--wide editorial-figure--coil-concepts"><img src="/assets/images/portfolio/coil-design-concepts.png" alt="Coil winder concept designs" loading="lazy"><figcaption>Prototyping concept generation.</figcaption></figure>
+    <figure class="editorial-figure editorial-figure--requirements editorial-figure--coil-requirements"><img src="/assets/images/portfolio/coil-criteria.png" alt="Westinghouse coil parameter requirements" loading="lazy"><figcaption>Westinghouse’s requirements.</figcaption></figure>
   </section>
   <section class="story-section story-data">
     <div class="editorial-row editorial-row--feature">
@@ -75,7 +73,7 @@ main-image: "/cover.jpg"
     <p>Wheeler’s formula tracked the measured coils better than the long-coil approximation, while the successful multi-layer runs showed that much higher inductance did not require giving up repeatability. The next useful iteration is mostly mechanical: improve tension control and nozzle alignment, calibrate pitch by wire gauge and mandrel diameter, then retest AWG24 and the 6 mm configurations.</p>
   </section>
   <section class="story-section">
-    <div class="editorial-row editorial-row--reverse editorial-row--compact">
+    <div class="editorial-row editorial-row--reverse editorial-row--compact coilboy-award-row">
       <div class="editorial-copy">
         <p class="story-eyebrow">SPRING DESIGN EXPO · 2026</p>
         <h2>Best Prototype</h2>

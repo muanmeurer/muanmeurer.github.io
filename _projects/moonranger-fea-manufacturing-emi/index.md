@@ -26,8 +26,9 @@ main-image: "/cover.png"
       <p>MoonRanger is planned to fly as a payload with Firefly Aerospace in 2029, and it won't get a gentle ride to the lunar surface. Though I've analyzed whether MoonRanger could overheat during transit, launch vibrations pose another risk: they could shake critical hardware apart. Even after surviving launch, what if the hold-down and release mechanisms (HDRMs) fail? Or electromagnetic interference (EMI) compromises sensor data?</p>
       <p>Aerospace has taught me that every extra component or line of errant code can threaten a mission that took years and millions of dollars to build. I was tasked with putting several of these risks to bed: model the problem, make the design decision, release the drawings, and prepare the hardware for verification.</p>
     </div>
-    <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-wheel-bracket-first-mode.gif" alt="Animated ANSYS first-mode deformation of finalized MoonRanger wheel bracket" loading="lazy"><figcaption>Finalized wheel bracket — first mode at 144.68 Hz.</figcaption></figure>
+    
   </div>
+  <figure class="editorial-figure editorial-figure--wide editorial-figure--hero-wheel"><img src="/assets/images/portfolio/moonranger-wheel-bracket-first-mode.gif" alt="Animated ANSYS first-mode deformation of finalized MoonRanger wheel bracket" loading="lazy"><figcaption>Finalized wheel bracket — first mode at 144.68 Hz.</figcaption></figure>
   <div class="story-stats" aria-label="MoonRanger design requirements and results">
     <div><span>MINIMUM FIRST MODE</span><strong>100 Hz</strong><small>Key structures under launch loading</small></div>
     <div><span>MODEL CORRELATION</span><strong>~0.6%</strong><small>Against earlier test-backed data</small></div>
@@ -52,7 +53,7 @@ main-image: "/cover.png"
       </div>
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-wheel-manufacturing-render.png" alt="CAD rendering of the redesigned MoonRanger wheel" loading="lazy"><figcaption>Redesigned MoonRanger wheel.</figcaption></figure>
     </div>
-    <div class="editorial-figure-pair editorial-figure-pair--modal" aria-label="Original and redesigned MoonRanger wheel modal analyses">
+    <div class="editorial-figure-pair editorial-figure-pair--modal editorial-figure-pair--wheel" aria-label="Original and redesigned MoonRanger wheel modal analyses">
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-wheel-baseline-modal.png" alt="190 mm wheel modal analysis" loading="lazy"><figcaption>190 mm wheel baseline: 154.23 Hz first mode.</figcaption></figure>
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-wheel-new-modal.png" alt="220 mm wheel modal analysis" loading="lazy"><figcaption>220 mm redesigned wheel: 139.34 Hz first mode.</figcaption></figure>
     </div>
@@ -74,7 +75,7 @@ main-image: "/cover.png"
       </div>
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-ferrite-retention-cad.png" alt="CAD of ferrite retention mount" loading="lazy"><figcaption>Mechanical retention mount for the ferrite cores.</figcaption></figure>
     </div>
-    <div class="editorial-figure-pair editorial-figure-pair--mixed" aria-label="Ferrite core and retention mount modal analysis">
+    <div class="editorial-figure-pair editorial-figure-pair--mixed editorial-figure-pair--ferrite" aria-label="Ferrite core and retention mount modal analysis">
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-split-core-ferrite.png" alt="Split-core ferrite bead" loading="lazy"><figcaption>COTS split-core ferrite bead.</figcaption></figure>
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-beadmount-analysis.png" alt="Ferrite bead assembly modal analysis" loading="lazy"><figcaption>Ferrite bead assembly — modal analysis.</figcaption></figure>
     </div>
@@ -90,7 +91,7 @@ main-image: "/cover.png"
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-dropbot.png" alt="DropBot CAD and components" loading="lazy"><figcaption>DropBot surrogate for Earth deployment testing.</figcaption></figure>
     </div>
     <p>Maintaining the top honeycomb plane's HDRM mating geometry within tolerance is no joke: more than 1 mm of misalignment would invalidate the test. I wrote the detailed deployment procedure defining what happens, how, and when. That work exposed the need for an alignment fixture, shown in red in the test-plan excerpt.</p>
-    <div class="editorial-figure-pair" aria-label="DropBot insert details and deployment procedure">
+    <div class="editorial-figure-pair editorial-figure-pair--drop" aria-label="DropBot insert details and deployment procedure">
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-potted-inserts.png" alt="DropBot potted inserts and drawings" loading="lazy"><figcaption>DropBot potted inserts drawings.</figcaption></figure>
       <figure class="editorial-figure"><img src="/assets/images/portfolio/moonranger-drop-test-plan.png" alt="Drop deployment test plan with alignment fixture" loading="lazy"><figcaption>Deployment test plan — alignment fixture highlighted in red.</figcaption></figure>
     </div>

@@ -1706,3 +1706,94 @@ html { background-color:#030712; }
   .post-view .content .editorial-project .editorial-figure-pair img {max-height:355px !important;}
   .post-view .content .editorial-project .editorial-figure-pair--charts img {max-height:none !important;}
 }
+
+
+/* 2026-10-23 scale/layout corrections requested by user */
+.editorial-project .editorial-row--flow {
+  display:block;
+}
+.editorial-project .editorial-copy--flow::after {content:""; display:block; clear:both;}
+.editorial-project .editorial-figure--atlas-float {
+  float:right;
+  width:min(52%, 520px);
+  max-width:520px;
+  margin:6px 0 16px 28px;
+}
+.post-view .content .editorial-project .editorial-figure--atlas-float img {
+  max-height:500px !important;
+}
+.editorial-project .lunabotics-award-row {
+  grid-template-columns:minmax(0,.58fr) minmax(0,1.42fr);
+  align-items:start;
+  gap:clamp(30px,4vw,48px);
+}
+.editorial-project .lunabotics-award-row > .editorial-figure {
+  max-width:330px;
+}
+.post-view .content .editorial-project .lunabotics-award-row > .editorial-figure img {
+  max-height:420px !important;
+}
+.editorial-project .editorial-video-pair {
+  max-width:100%;
+  gap:24px;
+}
+.editorial-project .editorial-video-pair .editorial-figure {
+  max-width:none;
+}
+.post-view .content .editorial-project .editorial-video-pair video {
+  max-height:430px !important;
+}
+.editorial-project .editorial-figure--hero-wheel {
+  max-width:720px;
+  margin:6px auto 22px;
+}
+.post-view .content .editorial-project .editorial-figure--hero-wheel img {
+  max-height:430px !important;
+}
+.editorial-project .editorial-figure-pair--wheel,
+.editorial-project .editorial-figure-pair--ferrite,
+.editorial-project .editorial-figure-pair--drop {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:none;
+}
+.post-view .content .editorial-project .editorial-figure-pair--wheel img {
+  max-height:345px !important;
+}
+.post-view .content .editorial-project .editorial-figure-pair--ferrite img,
+.post-view .content .editorial-project .editorial-figure-pair--drop img {
+  max-height:300px !important;
+}
+.editorial-project .editorial-figure--coil-concepts {
+  max-width:740px;
+  margin:24px auto 22px;
+}
+.post-view .content .editorial-project .editorial-figure--coil-concepts img {
+  max-height:360px !important;
+}
+.editorial-project .editorial-figure--coil-requirements {
+  max-width:720px;
+  margin:18px auto 4px;
+}
+.post-view .content .editorial-project .editorial-figure--coil-requirements img {
+  max-height:340px !important;
+}
+.editorial-project .coilboy-award-row {
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  align-items:center;
+  gap:clamp(30px,4vw,48px);
+}
+.editorial-project .coilboy-award-row > .editorial-figure {
+  max-width:480px;
+}
+.post-view .content .editorial-project .coilboy-award-row > .editorial-figure img {
+  max-height:420px !important;
+}
+@media (max-width:790px) {
+  .editorial-project .editorial-figure--atlas-float {
+    float:none; width:min(100%, 520px); max-width:520px; margin:10px auto 18px;
+  }
+  .editorial-project .lunabotics-award-row,
+  .editorial-project .coilboy-award-row {
+    grid-template-columns:minmax(0,1fr);
+  }
+}

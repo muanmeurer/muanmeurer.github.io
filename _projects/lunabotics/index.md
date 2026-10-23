@@ -29,10 +29,11 @@ main-image: "/cover.jpg"
     <div><span>ROVER</span><strong>80 kg</strong><small>ATLAS, with excavation and hauling capability</small></div>
   </div>
   <section class="story-section">
-    <div class="editorial-row editorial-row--feature">
-      <div class="editorial-copy">
+    <div class="editorial-row editorial-row--flow lunabotics-atlas-row">
+      <div class="editorial-copy editorial-copy--flow">
         <p class="story-eyebrow">MECHANICAL DESIGN · SYSTEMS · LEADERSHIP</p>
         <h2>What did I do?</h2>
+        <figure class="editorial-figure editorial-figure--atlas-float"><img src="/assets/images/portfolio/Lunabotics-CAD_breakdown.png" alt="CAD breakdown of ATLAS rover subsystems" loading="lazy"><figcaption>An overview of the important systems of ATLAS.</figcaption></figure>
         <ul>
           <li>Painstakingly optimized the mechanical architecture for excavation, storage, deposition, mobility, sensing, and electronics. Many late nights of SolidWorks CAD.</li>
           <li>Built a lunar-style arena from scratch and wrote countless test plans for physical validation. The arena cost $10,000 and took a month of manual labor in the bitter Pittsburgh winter.</li>
@@ -42,7 +43,6 @@ main-image: "/cover.jpg"
           <li>A smattering of other matters involving electronics, actuator tuning, path planning, competition strategy, logistics, and politics, to name a few.</li>
         </ul>
       </div>
-      <figure class="editorial-figure"><img src="/assets/images/portfolio/Lunabotics-CAD_breakdown.png" alt="CAD breakdown of ATLAS rover subsystems" loading="lazy"><figcaption>An overview of the important systems of ATLAS.</figcaption></figure>
     </div>
     <div class="editorial-row editorial-row--reverse editorial-row--feature editorial-row--compact">
       <div class="editorial-copy">
@@ -53,7 +53,7 @@ main-image: "/cover.jpg"
     </div>
   </section>
   <section class="story-section">
-    <div class="editorial-row editorial-row--reverse">
+    <div class="editorial-row editorial-row--reverse editorial-row--award lunabotics-award-row">
       <div class="editorial-copy">
         <p class="story-eyebrow">COMPETITION &amp; WHAT CAME NEXT</p>
         <h2>How did it turn out?</h2>
